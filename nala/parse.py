@@ -4,7 +4,7 @@ from . import mof
 from HTMLParser import HTMLParser
 import os
 
-DEBUG =  False
+DEBUG = True
 
 
 def list_commands():
@@ -275,6 +275,43 @@ class NalaHTMLParser(object):
             print "Unkown parse mode"
             return None
 
+    def _set_mof_as_type_I(self, attr_name_stack, attr_value_stack):
+
+        print "Debug: ", DEBUG
+
+        if DEBUG:
+            print "attr_name_stack: ", attr_name_stack
+            print "attr_value_stack: ", attr_value_stack
+
+        if len(attr_name_stack) == 0 or len(attr_value_stack) == 0:
+            return None
+
+        tmp_mof = mof.MOF(self._class_name)
+        self.html_store.add_mof(tmp_mof)
+        # 1. if the len(val) / len(attr) > 1, means the inst
+        # number > 1
+        if len(attr_value_stack) / len(attr_name_stack) > 1:
+            for i in range(0, len(attr_value_stack)):
+                if i % len(attr_name_stack) == 0 and i > 0:
+                    tmp_mof = mof.MOF(self._class_name)
+                    self.html_store.add_mof(tmp_mof)
+                    tmp_mof.set_parameters(self._class_name, attr_name_stack[
+                               i % len(attr_name_stack)], attr_value_stack[i])
+            attr_name_stack = []
+            attr_value_stack = []
+        else:
+            while len(attr_name_stack) > 0:
+                tmp_mof.set_parameters(
+                self._class_name, attr_name_stack.pop(), attr_value_stack.pop())
+        return self.html_store
+    def _set_mof_as_type_II(self, attr_name_stack, attr_value_stack):
+
+        return self._set_mof_as_type_I(attr_name_stack, attr_value_stack)
+
+    def _set_mof_as_type_III(self, attr_name_stack, attr_value_stack):
+        pass
+
+
     def _parse_split(self, file_path):
 
         f = self._open_file(file_path)
@@ -284,7 +321,30 @@ class NalaHTMLParser(object):
         th_number = 0
         td_number = 0
         start_count_tr = False
-        talbe_type_is = None
+        table_type_is = None
+
+
+        def get_table_type(th_number, td_number):
+           if DEBUG is True:
+                print "Debug%s th_number: %d" % (self.__file__ + self.__function__, th_number)
+                print "Debug%s td_number: %d" % (self.__file__ + self.__function__, td_number)
+                if th_number > td_number and th_number > 0:
+                    return self.__class__.table_type[0]
+                elif th_number == td_number and td_number == 1:
+                   return self.__class__.table_type[1]
+                elif th_number < td_number and th_number == 1:
+                   return self.__class__.table_type[2]
+
+        def set_mof():
+            if table_type_is == self.__class__.table_type[0]:
+                return self._set_mof_as_type_I(attr_name_stack, attr_value_stack)
+            elif table_type_is == self.__class__.table_type[1]:
+                return self._set_mof_as_type_II(attr_name_stack, attr_value_stack)
+            elif table_type_is == self.__class__.table_type[2]:
+               return self._set_mof_as_type_III(attr_name_stack, attr_value_stack)
+            else:
+                print "Unkown table type: ", table_type_is
+                return None
 
         if f:
             try:
@@ -301,23 +361,10 @@ class NalaHTMLParser(object):
                         td_number = 0
                     elif m_inst:
                         # New instance will come, set the parameters
-                        tmp_mof = mof.MOF(self._class_name)
-                        self.html_store.add_mof(tmp_mof)
-                        # 1. if the len(val) / len(attr) > 1, means the inst
-                        # number > 1
-                        if len(attr_value_stack) / len(attr_name_stack) > 1:
-                            for i in range(0, len(attr_value_stack)):
-                                if i % len(attr_name_stack) == 0 and i > 0:
-                                    tmp_mof = mof.MOF(self._class_name)
-                                    self.html_store.add_mof(tmp_mof)
-                                tmp_mof.set_parameters(self._class_name, attr_name_stack[
-                                                       i % len(attr_name_stack)], attr_value_stack[i])
-                            attr_name_stack = []
-                            attr_value_stack = []
-                        else:
-                            while len(attr_name_stack) > 0:
-                                tmp_mof.set_parameters(
-                                    self._class_name, attr_name_stack.pop(), attr_value_stack.pop())
+                        #tmp_mof = mof.MOF(self._class_name)
+                        #self.html_store.add_mof(tmp_mof)
+                        if set_mof() is None:
+                            break
                     elif m_attr:
                         if th_number == 0:
                             start_count_tr = True
@@ -340,15 +387,7 @@ class NalaHTMLParser(object):
                                     attr_value_stack.append(' ')
                                 else:
                                     attr_value_stack.append(val.strip('</td>'))
-                    if start_count_tr is True:
-                        def get_table_type(th_number, td_number):
-                            if th_number > td_number and th_number > 0:
-                                return self.__class__.table_type[0]
-                            elif th_number == td_number and td_number == 1:
-                                return self.__class__.table_type[1]
-                            elif th_number < td_number and th_number == 1:
-                                return self.__class__.table_type[2]
-                        if line.startswith('<tr'):
+                    elif start_count_tr is True and line.startswith('<tr'):
                             talbe_type_is = get_table_type(th_number, td_number)
 
 
