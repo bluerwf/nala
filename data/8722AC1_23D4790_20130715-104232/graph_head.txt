@@ -1,0 +1,397 @@
+<script type="text/javascript" src="wz_jsgraphics.js"></script>
+
+<!-- calendar popup file -->
+<script src = "calendarPopup.js" ></script>
+<SCRIPT LANGUAGE="JavaScript">document.write(getCalendarStyles());</SCRIPT>
+
+<script type="text/javascript">
+<!--
+var MILLIS_PER_DAY = (1000*60*60*24);
+
+var margin = 1;
+var barWidth = 2;
+var maxNumFrames = 52;
+var barMaxHeight = 30;
+
+// the distance in days to maxDate between which to display events
+var firstToShow = 7;
+var lastToShow = 0;
+
+var ECsData = new Array();
+
+
+// given a date, return the bar ID corresponding to this date, based
+// on current state of graph
+// 'eventTime' is the number of days earlier than maxDate
+function getBarID(eventTime)
+{
+ // as these are measured by distance from maxDate, 
+ // firstToShow is larger than lastToShow.
+
+  // calculate barID only for relevant events
+  if ((eventTime > lastToShow) && (eventTime <= firstToShow)) {
+    graphTime = firstToShow - lastToShow;
+    barID = Math.round(((eventTime - lastToShow) / graphTime) * (maxNumFrames-1));
+  } else {
+    barID = -1;
+  }   
+
+  return barID;
+}
+
+
+// given a set of events (their timestamp in days and importance)
+// calculate which bars should be drawn on the canvas.
+function calulateStateOfBars(events)
+{
+  var bars = new Array(maxNumFrames);
+  var barID;
+  var eventTime;
+  var curNumEvents = 0;
+
+//  document.writeln('showing events ' + firstToShow + ' to ' + lastToShow);
+
+  for (i = 0; i < events.length; i++) {
+    eventTime = events[i][0];
+    eventImportance = events[i][1];
+
+    // skip dummy event
+    if ((eventTime == 0) && (eventImportance == 0)) {
+       continue;
+    }
+
+    barID = getBarID(eventTime);
+
+    if (barID >= 0) {
+      curNumEvents = curNumEvents + 1;
+
+      if (bars[barID] == null) {
+	bars[barID] = eventImportance;
+      } else {
+        // update only if importance is higher.
+        bars[barID] = Math.max(bars[barID], eventImportance); 
+      }
+//  document.writeln('bars[' + barID + '] = ' + bars[barID]);
+    }
+  }
+  return {barsState: bars, curNumEvents: curNumEvents};
+}
+
+
+function drawBar(canvas, frameID, importance)
+{
+//  var barHeight = Math.floor(barMaxHeight * (importance/100));
+  // use logarithmic scaling for the bar height
+  var barHeight = Math.floor((4.65 - Math.log(101-Math.min(importance,100)))*barMaxHeight/4.65);
+  var xpos = margin + ((maxNumFrames - 1 - frameID) * barWidth);
+  var ypos = margin + barMaxHeight - barHeight;
+  if (barHeight == 0) {
+    return;
+  }
+  if (frameID > maxNumFrames) {
+    return;
+  }
+
+  canvas.setColor("#00FC00"); // green
+  if (importance >= 80) {
+    canvas.setColor("#EEEE00"); // yellow
+  }
+   if (importance >= 95) {
+    canvas.setColor("#FF9900"); // oragne
+  }
+  if (importance == 101) {
+    canvas.setColor("#FC0000"); // red
+  }
+
+  canvas.fillRect(xpos, ypos, barWidth, barHeight);
+  canvas.paint();
+//  alert(xpos + ' ' + ypos + ' ' + barWidth + ' ' + barHeight);
+}
+
+
+// fill graph areas below lowLimit and above highLimit in grey
+// 'lowLimit' and 'highLimit' are Dates
+function drawLimits(canvas, lowLimit, highLimit)
+{
+  var lowBar = getBarID((maxDate - lowLimit) / MILLIS_PER_DAY);
+  var highBar = getBarID((maxDate - highLimit) / MILLIS_PER_DAY);
+
+  if (!(lowBar == -1)) {
+    var xpos = margin;
+    var ypos = margin;
+    var width = barWidth * (maxNumFrames - 1 - lowBar);
+
+    canvas.setColor("#999999"); // grey
+    canvas.fillRect(xpos, ypos, width, barMaxHeight);
+    canvas.paint();
+//  alert(xpos + ' ' + ypos + ' ' + barWidth + ' ' + barHeight);
+  }
+
+/*
+  if (!(highBar == -1)) {
+    var xpos = margin + ((maxNumFrames - highBar+1) * barWidth);
+    var ypos = margin;
+    var width = barWidth * (highBar-1);
+
+    canvas.setColor("#CCCCCC"); // grey
+    canvas.fillRect(xpos, ypos, width, barMaxHeight);
+    canvas.paint();
+  }
+*/
+}
+
+
+
+function getParentTR(obj)
+{
+  while( obj && obj.tagName != "TR" )
+     obj = obj.parentNode;
+
+  return obj;
+}
+
+
+function showTableRow(canvasName)
+{
+      body=document.getElementById(canvasName);
+      row = getParentTR(body);
+
+      if (row) {
+        try {
+          row.style.display='table-row';
+        } catch(e) {
+          row.style.display = 'block';
+        }
+      }
+}
+
+
+function hideTableRow(canvasName)
+{
+      body=document.getElementById(canvasName);
+      row = getParentTR(body);
+
+      if (row) {
+        if (row.style.display != 'none') {
+          row.style.display = 'none';
+        }
+      }
+}
+
+
+function createBarGraph(canvasName, data)
+{
+  var empty = true;
+  var jg = new jsGraphics(canvasName);
+
+  jg.setColor("#000000"); // black
+  jg.fillRect(0, 0, (2 * margin) + (barWidth * maxNumFrames), (2 *
+      margin) + barMaxHeight);
+  jg.paint();
+
+  var tmpReturn = calulateStateOfBars(data);
+  var barsState = tmpReturn.barsState;
+  var curNumEvents = tmpReturn.curNumEvents;
+
+  var className = ECsData[canvasName].className;
+  var classLowLimit = classNameInfo[className].firstDate;
+  var classHighLimit = classNameInfo[className].lastDate;
+
+  drawLimits(jg, classLowLimit, classHighLimit);
+
+//DEBUG//  document.writeln('barstate is ' + barsState);
+
+  // if there are events to draw, draw them.
+  if (curNumEvents > 0) {
+    empty = false;
+    for (i=0; i< barsState.length; i++) {
+	if (barsState[i] > 0) {
+	   drawBar(jg, i, barsState[i]);
+	}
+    }
+  } else {
+    empty = true;
+  }
+
+  if (empty) {
+    hideTableRow(canvasName);
+  } else {
+    showTableRow(canvasName);
+  }
+
+  // update the '# of events' cell with the number of events shown.
+  var pnum = document.getElementById('ne' + canvasName);
+  if (pnum) {
+    pnum.innerHTML = curNumEvents;
+  }
+}
+
+
+function DrawAllGraphs(ECsData)
+{
+  var curCanvas;
+  for (var canvasName in ECsData) {
+    curCanvas = ECsData[canvasName];
+    createBarGraph(canvasName, curCanvas.events);
+  }
+
+  // update the 'each bar is # days' paragraph
+  var daysPerBarElement = document.getElementById('daysPerBar');
+  if (daysPerBarElement) {
+    var graphTime = firstToShow - lastToShow;
+    var daysPerBar = (graphTime / maxNumFrames);
+    var daysPerBarText;
+    if (daysPerBar > 1) {
+      daysPerBarText = daysPerBar.toFixed(1) + ' days';
+    } else {
+      daysPerBarText = (daysPerBar*24).toFixed(1) + ' hours';
+    }
+    daysPerBarElement.innerHTML = '1 bar = <font color="yellow">' + daysPerBarText + '</font>';
+  }
+}
+
+
+function redrawGraphs() {
+//  alert('initiating redraw');
+  DrawAllGraphs(ECsData);
+}
+
+
+function init() 
+{
+  var tmp;
+  
+  tmp = new Date(maxDate);
+  tmp.setDate(tmp.getUTCDate()+1);
+  calFromDate.addDisabledDates(formatDate(tmp,"yyyy-MM-dd"), null);
+  calToDate.addDisabledDates(formatDate(tmp,"yyyy-MM-dd"), null);
+
+  tmp = new Date(minDate);
+  tmp.setDate(tmp.getUTCDate()-1);
+  calFromDate.addDisabledDates(null, formatDate(tmp,"yyyy-MM-dd"));
+  calToDate.addDisabledDates(null, formatDate(tmp,"yyyy-MM-dd"));
+
+  resetTimeLimits();
+
+//  document.getElementById("scoreHeader").title="Score Key:\n" +
+//  document.getElementById("IBMSG_MelodyMessageLog").title="Score Key:\n" +
+//  "101: This message is very rare.\n" +
+//  "90-100: This message is quite rare, or it appeared an unusually large number of times.\n" +
+//  "70-90: This message appears in this log file more than it usually appears.\n" +
+//  "0-70: This message appears in this log file about the usual number of times.";
+
+// being taken care of in resetTimeLimits()
+//  DrawAllGraphs(ECsData);
+}
+
+
+function resetTimeLimits()
+{
+  var tmp;
+  tmp = new Date(maxDate);
+  updateLastToShow(tmp.getUTCFullYear(), tmp.getUTCMonth()+1, tmp.getUTCDate(),true);
+ 
+  tmp = new Date(minDate);
+  updateFirstToShow(tmp.getUTCFullYear(), tmp.getUTCMonth()+1, tmp.getUTCDate(), false);
+}
+
+
+function updateFirstToShow(y,m,d,skipRedraw)
+{
+  var newFirstMilli = Date.UTC(y,m-1,d);
+
+  var newFirstToShow = (maxDate - newFirstMilli) / MILLIS_PER_DAY;
+  
+//  alert('newFirstToShow is ' + newFirstToShow + ', while lastToShow is ' + lastToShow);
+  // can't select negative interval (compensate for precision errors)
+  if (newFirstToShow < lastToShow + 0.01) {
+    alert('You cannot set the start date to be later than the end date!');
+    // use the current firstToShow
+    newFirstMilli = maxDate - (firstToShow * MILLIS_PER_DAY);
+    newFirstToShow = firstToShow;
+  }
+
+  firstToShow = newFirstToShow;
+
+  var firstMilliDate = new Date(newFirstMilli);
+  document.forms[0].dateFrom.value = formatDate(firstMilliDate, 'MM/dd/yyyy');
+
+  // DEBUG //
+//  document.forms[0].dateFrom.value = firstToShow;
+
+  if (!skipRedraw) {
+    redrawGraphs();
+  }
+}
+
+
+function updateLastToShow(y,m,d,skipRedraw)
+{
+  var newLastMilli = Date.UTC(y,m-1,d);
+
+  // add 1 day to the last date to show, as we want to include all events
+  // in this day.
+  newLastToShow = ((maxDate - newLastMilli) / MILLIS_PER_DAY) - 1;
+
+//  alert('firstToShow is ' + firstToShow + ', while newLastToShow is ' + newLastToShow);
+  // can't select negative interval (compensate for precision errors)
+  if (firstToShow < newLastToShow + 0.01) {
+    alert('You cannot set the end date to be earlier than the start date!');
+    // use the current lastToShow
+    newLastMilli = maxDate - ((lastToShow+1) * MILLIS_PER_DAY);
+    newLastToShow = lastToShow;
+  }
+
+  lastToShow = newLastToShow;
+  
+  var lastMilliDate = new Date(newLastMilli);
+  document.forms[0].dateTo.value = formatDate(lastMilliDate, 'MM/dd/yyyy');
+
+  // DEBUG //
+//  document.forms[0].dateTo.value = lastToShow;
+
+  if (!skipRedraw) {
+    redrawGraphs();
+  }
+}
+
+
+window.onload = init;
+
+-->
+</script>
+	<style type="text/css">
+	
+		#slider a img {
+			border: none;
+		}
+	
+		#slider img.first{
+			float: left;
+		}
+	
+		#sliderbg{
+			background-image: url(rail.gif);
+			background-position: center left;
+			background-repeat: repeat-x;
+			height: 10px;
+			width: 95px;
+			margin: 0 5px;
+			float: left;
+		}
+		
+		#sliderthumb{
+			height: 12px;
+			width: 12px;
+		}
+
+		A.title {
+		       color: white;
+		}
+
+		.graphCanvas {
+			     position: relative;
+			     height:32px;
+			     width:106px;
+		}
+	</style>

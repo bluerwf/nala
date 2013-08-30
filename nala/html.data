@@ -1,0 +1,101 @@
+html store: firmware.html
+Encounter a start tag:  html
+[]
+Encounter data:  
+
+Encounter a start tag:  head
+[]
+Encounter data:  
+
+Encounter a start tag:  body
+[]
+Encounter data:  
+
+Encounter a end tag:  head
+[]
+Encounter data:  
+
+Encounter a start tag:  link
+[]
+Encounter data:  
+
+Encounter a start tag:  div
+['div']
+Encounter data:  Firmware/VPD
+Encounter a end tag:  div
+[]
+Encounter data:  
+
+Encounter a start tag:  br
+Encounter a start tag:  div
+['br', 'div']
+Encounter data:  Firmware
+Encounter a end tag:  div
+['br']
+Encounter data:  
+
+Encounter a start tag:  table
+['br']
+Encounter data:  
+
+Encounter a start tag:  tr
+['br', 'tr']
+Encounter data:  
+
+Encounter a start tag:  th
+['br', 'tr', 'th']
+Encounter data:  Name
+Encounter a end tag:  th
+['br', 'tr']
+Encounter data:  
+
+Encounter a start tag:  th
+['br', 'tr', 'th']
+Encounter data:  Manufacturer
+Encounter a end tag:  th
+['br', 'tr']
+Encounter data:  
+
+Encounter a start tag:  th
+['br', 'tr', 'th']
+Encounter data:  Product Name
+Encounter a end tag:  th
+['br', 'tr']
+Encounter data:  
+
+Encounter a start tag:  th
+['br', 'tr', 'th']
+Encounter data:  Device
+Encounter a end tag:  th
+['br', 'tr']
+Encounter data:  
+
+Encounter a start tag:  th
+['br', 'tr', 'th']
+Encounter data:  Version
+Encounter a end tag:  th
+['br', 'tr']
+Encounter data:  
+
+Encounter a start tag:  th
+['br', 'tr', 'th']
+Encounter data:  BuildNumber
+Encounter a end tag:  th
+['br', 'tr']
+Encounter data:  
+
+Encounter a start tag:  th
+['br', 'tr', 'th']
+Encounter data:  Build Date
+Encounter a end tag:  th
+['br', 'tr']
+Encounter data:  
+
+Encounter a end tag:  tr
+['br']
+Encounter data:  
+
+Encounter a start tag:  tr
+['br', 'tr']
+Encounter data:  
+

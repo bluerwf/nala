@@ -1,0 +1,44 @@
+class name: SNMP Community
+		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
+		 Name = Community-1
+		 CommunityString =  
+class name: SNMP Community
+		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
+		 Name = Community-2
+		 CommunityString =  
+class name: SNMP Community
+		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
+		 Name = Community-3
+		 CommunityString =  
+class name: DHCP IPv4 Address
+		 IPv4Address = 9.115.252.134
+		 SubnetMask = 255.255.252.0
+		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
+class name: IPv6 Stateless Address
+		 PrefixLength = 0
+		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
+		 IPv6Address = 2002:97b:c2bb:830:e61f:13ff:fed9:99
+class name: IPv6 Stateless Address
+		 PrefixLength = 0
+		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
+		 IPv6Address = 2002:977:290a:5:e61f:13ff:fed9:99
+class name: IPv6 Stateless Address
+		 PrefixLength = 0
+		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
+		 IPv6Address = 2002:973:fc11:5:e61f:13ff:fed9:99
+class name: IPv6 Stateless Address
+		 PrefixLength = 0
+		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
+		 IPv6Address = fec0::5:e61f:13ff:fed9:99
+class name: CIM:dnsdata2
+		 RequestedHostname = IMM2-e41f13d9099
+		 ElementName = DNS Setting Data 2 for IPv6
+		 DNSServerAddresses =  
+class name: CIM:dnsdata1
+		 RequestedHostname = IMM2-e41f13d9099
+		 ElementName = DNS Setting Data 1 for IPv4
+		 DNSServerAddresses =  
+class name: IPv6 Local Link Address
+		 PrefixLength = 0
+		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
+		 IPv6Address = fe80::e61f:13ff:fed9:99

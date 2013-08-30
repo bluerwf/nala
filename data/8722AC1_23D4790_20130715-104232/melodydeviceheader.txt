@@ -1,0 +1,51 @@
+<table cellspacing="5" cellpadding="5" width="100%">
+<tr>
+<td class="pageheader" valign="top">Melody Device Analysis</td>
+<td align="right" rowspan="2">
+<table border="0" cellspacing="1" cellpadding="1">
+<tr class="bg0">
+<th class="tableheader" width="0%">Score</th>
+<th class="tableheader" width="0%">Meaning</th>
+</tr>
+<tr class="bg1">
+<td align="left" valign="top">
+99-100
+</td>
+<td align="left" valign="top">
+unique or almost unique
+</td>
+</tr>
+<tr class="bg0">
+<td align="left" valign="top">
+90-98
+</td>
+<td align="left" valign="top">
+very rare
+</td>
+</tr>
+<tr class="bg1">
+<td align="left" valign="top">
+50-89
+</td>
+<td align="left" valign="top">
+quite rare
+</td>
+</tr>
+<tr class="bg0">
+<td align="left" valign="top">
+0-49
+</td>
+<td align="left" valign="top">
+uncommon
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="pagetitle">
+This view shows selected attributes of this system.<br> 
+Only attributes with values that are very uncommon compared to other systems are shown.
+</td>
+</tr>
+</table>

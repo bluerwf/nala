@@ -1,0 +1,37 @@
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "vsmraid";
+Description = "vsmraid";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "VIA Technologies Inc.,Ltd";
+Version = "7.0.8140,6290";
+CreationTime = "20120602073309.000715-420";
+Path = "c:\\windows\\system32\\drivers\\vsmraid.sys";
+};
+
+
+class IBMUIMINV_DEVICEDRIVERS
+{
+Name = "vsmraid";
+Description = "vsmraid";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "VIA Technologies Inc.,Ltd";
+Version = "7.0.8140,6290";
+CreationTime = "20120602073309.000715-420";
+Path = "c:\\windows\\system32\\drivers\\vsmraid.sys";
+};
+
+
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "abcdef";
+Description = "vsmraid";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "VIA Technologies Inc.,Ltd";
+Version = "7.0.8140,6290";
+CreationTime = "20120602073309.000715-420";
+Path = "c:\\windows\\system32\\drivers\\vsmraid.sys";
+};

@@ -1,0 +1,4013 @@
+#pragma namespace("\\\\.\\root")
+#pragma deleteinstance("__Namespace.Name='ibmuiminv'", nofail)
+
+#pragma namespace("\\\\.\\root")
+instance of __Namespace
+{
+Name = "ibmuiminv";
+};
+
+#pragma namespace("\\\\.\\root\\ibmuiminv")
+class IBMUIMINV_INVENTORYTOOLSTATE
+{
+[key]
+datetime Time;
+string State;
+};
+class IBMUIMINV_SYSTEMOVERVIEW
+{
+[key]
+string ProductName;
+string Manufacturer;
+string Version;
+string SerialNumber;
+string UUID;
+};
+class IBMUIMINV_MEMORY
+{
+[key]
+string Tag;
+string BankLabel;
+string Capacity;
+string MemoryType;
+string MaxSpeed;
+string ErrorMethodology;
+string Manufacturer;
+string PartNumber;
+string SerialNumber;
+};
+class IBMUIMINV_BIOS_AND_UEFI
+{
+[key]
+string Name;
+string BuildNumber;
+string Version;
+datetime ReleaseDate;
+};
+class IBMUIMINV_FIRMWARE
+{
+[key]
+string Name;
+string Manufacturer;
+string Version;
+string BuildNumber;
+datetime BuildDate;
+};
+class IBMUIMINV_DEVICEDRIVERS
+{
+[key]
+string Name;
+string Description;
+string CurrentState;
+string StartupState;
+string Manufacturer;
+string Version;
+datetime CreationTime;
+string Path;
+};
+class IBMUIMINV_FODKEY
+{
+[key]
+string Description;
+string FeatureDescription;
+string Status;
+};
+class IBMUIMINV_IMMCONFIGIPV4_DHCP
+{
+[key]
+string Address;
+string SubnetMask;
+string SystemName;
+};
+class IBMUIMINV_IMMCONFIGIPV4_STATIC
+{
+string InstanceID;
+[key]
+string Address;
+string SubnetMask;
+string Gateway;
+};
+class IBMUIMINV_IMMCONFIGIPV6_DHCP
+{
+[key]
+string Address;
+string SubnetPrefixLength;
+string SystemName;
+};
+class IBMUIMINV_IMMCONFIGIPV6_STATELESS
+{
+[key]
+string Address;
+string PrefixLength;
+string SystemName;
+};
+class IBMUIMINV_IMMCONFIGIPV6_LOCALLINK
+{
+[key]
+string Address;
+string PrefixLength;
+string SystemName;
+};
+class IBMUIMINV_IMMCONFIGIPV6_STATIC
+{
+[key]
+string Address;
+string PrefixLength;
+string Gateway;
+};
+class IBMUIMINV_LSICONTROLLERINFORMATION
+{
+[key]
+string LSIControllerNumber;
+string ElementName;
+string ModuleName;
+string BIOSVersion;
+string FirmwareVersion;
+string FWPackageBuildversion;
+};
+class IBMUIMINV_LSILOGICALDRIVES
+{
+[key]
+string DiskName;
+string LSIControllerNumber;
+string LogicalName;
+string ModuleName;
+string OperationalStatus;
+string RAIDLevel;
+};
+class IBMUIMINV_LSIPHYSICALDRIVES
+{
+[key]
+string DiskName;
+string LSIControllerNumber;
+string ModuleName;
+string ElementName;
+string OperationalStatus;
+string FRUNumber;
+string BlockSize;
+string NumberOfBlocks;
+string Manufacturer;
+string FirmwareVersion;
+};
+class IBMUIMINV_PMCAPPLICATIONSOFTWARE
+{
+[key]
+string Name;
+string Version;
+};
+class IBMUIMINV_PMCCARDCONTROLLER
+{
+[key]
+string SerialNumber;
+string Model;
+string PMCControllerNumber;
+string Manufacturer;
+string ElementName;
+string PartNumber;
+string DriverVersion;
+string BIOSVersion;
+string FirmwareVersion;
+};
+class IBMUIMINV_PMCLOGICALDISK
+{
+[key]
+string DeviceID;
+string PMCControllerNumber;
+string ControllerId;
+string VolumeSetId;
+string RAIDLevel;
+string OperationalStatus;
+string State;
+string Size;
+string StripeUnitSize;
+};
+class IBMUIMINV_PMCPHYSICALDISK
+{
+[key]
+string DeviceID;
+string PMCControllerNumber;
+string ControllerModelName;
+string ControllerElementName;
+string ArrayID;
+string Capacity;
+string Type;
+string InterfaceType;
+string DriveType;
+string OperationalStatus;
+string ProductName;
+string WWN;
+string Manufacturer;
+string Model;
+string SerialNumber;
+string Version;
+};
+class IBMUIMINV_MELLANOXDRIVER
+{
+[key]
+string InstanceID;
+string Caption;
+string Description;
+string ElementName;
+string IsEntity;
+string MajorVersion;
+string Manufacturer;
+string MinorVersion;
+string Name;
+string OperationalStatus;
+string RevisionNumber;
+string Version;
+};
+class IBMUIMINV_MELLANOXFIRMARE
+{
+[key]
+string InstanceID;
+string Caption;
+string Description;
+string ElementName;
+string Location;
+string MajorVersion;
+string Manufacturer;
+string MinorVersion;
+string Name;
+string RevisionNumber;
+string Version;
+};
+class IBMUIMINV_MELLANOXPCIDEVICE
+{
+[key]
+string DeviceID;
+string InstanceID;
+string Caption;
+string Description;
+string ElementName;
+string Name;
+string OperationalStatus;
+string StatusDescriptions;
+string HealthState;
+string PrimaryStatus;
+string EnabledState;
+string RequestedState;
+string SystemCreationClassName;
+string SystemName;
+string CreationClassName;
+string BusNumber;
+string DeviceNumber;
+string FunctionNumber;
+string PCIDeviceID;
+string VendorID;
+string RevisionNumber;
+};
+class IBMUIMINV_MELLANOXETHERNETPORT
+{
+[key]
+string DeviceID;
+string ElementName;
+string ActiveMaximumTransmissionUnit;
+string AutoSense;
+string Caption;
+string CreationClassName;
+string Description;
+string EnabledCapabilities;
+string FullDuplex;
+string InstanceID;
+string LinkTechnology;
+string MaxSpeed;
+string Name;
+string NetworkAddresses;
+string OperationalStatus;
+string PermanentAddress;
+string Speed;
+string SupportedMaximumTransmissionUnit;
+string SystemName;
+string SystemCreationClassName;
+};
+class IBMUIMINV_MELLANOXIBPORT
+{
+[key]
+string DeviceID;
+string ElementName;
+string AutoSense;
+string Caption;
+string CreationClassName;
+string Description;
+string EnabledState;
+string EnabledCapabilities;
+string FullDuplex;
+string InstanceID;
+string LIDMask;
+string LinkTechnology;
+string LinkSpeedActive;
+string LinkWidthActive;
+string MaxSpeed;
+string Name;
+string NetworkAddresses;
+string OperationalStatus;
+string PermanentAddress;
+string PortNumber;
+string PortType;
+string Speed;
+string StatusDescriptions;
+string SystemCreationClassName;
+string SystemName;
+};
+class IBMUIMINV_QLOGICFIBREFIRMWARES
+{
+[key]
+string Name;
+string Manufacturer;
+string Device;
+string Version;
+string BuildNumber;
+string BuildDate;
+};
+class IBMUIMINV_QLOGICFIBREBIOS
+{
+[key]
+string Name;
+string Version;
+string ReleaseDate;
+};
+class IBMUIMINV_QLOGICISCSIFIRMWARE
+{
+[key]
+string Name;
+string Manufacturer;
+string Device;
+string Version;
+string BuildNumber;
+string BuildDate;
+};
+class IBMUIMINV_QLOGICISCSIBIOS
+{
+[key]
+string Name;
+string Version;
+string ReleaseDate;
+};
+class IBMUIMINV_BROCADEPORTCONTROLLER
+{
+[key]
+string DeviceID;
+string Description;
+string Manufacturer;
+string Model;
+string SerialNumber;
+string TotalPhysicalPort;
+};
+class IBMUIMINV_BROCADEFCPORT
+{
+[key]
+string PortNumber;
+string WWNN;
+string WWPN;
+string LinkTechnology;
+string OperationalStatus;
+string Caption;
+string MaxSpeed;
+string Speed;
+string EnabledState;
+string PortAvailability;
+string RequestedState;
+string TransitioningToState;
+};
+class IBMUIMINV_BROCADEETHERNETPORT
+{
+[key]
+string PortNumber;
+string DeviceID;
+string ElementName;
+string LinkTechnology;
+string OperationalStatus;
+string PermanentAddress;
+string NetworkAddresses;
+string RequestedState;
+};
+class IBMUIMINV_BROCADESOFTWAREIDENTITY
+{
+[key]
+string Description;
+string Version;
+};
+class IBMUIMINV_BROCADCOMFIRMWARE
+{
+[key]
+string Name;
+string Version;
+};
+class IBMUIMINV_EMXCNAPRODUCT
+{
+[key]
+string Name;
+string IdentifyingNumber;
+};
+class IBMUIMINV_EMXCNAFIRMWARE
+{
+[key]
+string Name;
+string Version;
+};
+class IBMUIMINV_EMXCNADRIVER
+{
+[key]
+string Name;
+string Version;
+};
+class IBMUIMINV_EMULEXFOD
+{
+[key]
+string InstanceId;
+string FoDId;
+string FoDType;
+string State;
+string ChangeableType;
+};
+
+instance of IBMUIMINV_SYSTEMOVERVIEW
+{
+ProductName = "System x3750 M4 -[8722AC1]-";
+Manufacturer = "IBM";
+Version = "05";
+SerialNumber = "23D4790";
+UUID = "614c721c-3d17-11e1-98cd-e41f13da1082";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 1/Node 1 Bank 1";
+BankLabel = "Node 1 Bank 1";
+Capacity = "4 GB";
+MemoryType = "DDR3";
+MaxSpeed = "1333 MHz";
+ErrorMethodology = "Single-bit ECC";
+Manufacturer = "Samsung";
+PartNumber = "M393B5270DH0-YH9";
+SerialNumber = "213E730B";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 10/Node 1 Bank 10";
+BankLabel = "Node 1 Bank 10";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 11/Node 1 Bank 11";
+BankLabel = "Node 1 Bank 11";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 12/Node 1 Bank 12";
+BankLabel = "Node 1 Bank 12";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 13/Node 1 Bank 13";
+BankLabel = "Node 1 Bank 13";
+Capacity = "4 GB";
+MemoryType = "DDR3";
+MaxSpeed = "1333 MHz";
+ErrorMethodology = "Single-bit ECC";
+Manufacturer = "Samsung";
+PartNumber = "M393B5270DH0-YH9";
+SerialNumber = "213E7133";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 14/Node 1 Bank 14";
+BankLabel = "Node 1 Bank 14";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 15/Node 1 Bank 15";
+BankLabel = "Node 1 Bank 15";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 16/Node 1 Bank 16";
+BankLabel = "Node 1 Bank 16";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 17/Node 1 Bank 17";
+BankLabel = "Node 1 Bank 17";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 18/Node 1 Bank 18";
+BankLabel = "Node 1 Bank 18";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 19/Node 1 Bank 19";
+BankLabel = "Node 1 Bank 19";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 2/Node 1 Bank 2";
+BankLabel = "Node 1 Bank 2";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 20/Node 1 Bank 20";
+BankLabel = "Node 1 Bank 20";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 21/Node 1 Bank 21";
+BankLabel = "Node 1 Bank 21";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 22/Node 1 Bank 22";
+BankLabel = "Node 1 Bank 22";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 23/Node 1 Bank 23";
+BankLabel = "Node 1 Bank 23";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 24/Node 1 Bank 24";
+BankLabel = "Node 1 Bank 24";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 25/Node 1 Bank 25";
+BankLabel = "Node 1 Bank 25";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 26/Node 1 Bank 26";
+BankLabel = "Node 1 Bank 26";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 27/Node 1 Bank 27";
+BankLabel = "Node 1 Bank 27";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 28/Node 1 Bank 28";
+BankLabel = "Node 1 Bank 28";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 29/Node 1 Bank 29";
+BankLabel = "Node 1 Bank 29";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 3/Node 1 Bank 3";
+BankLabel = "Node 1 Bank 3";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 30/Node 1 Bank 30";
+BankLabel = "Node 1 Bank 30";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 31/Node 1 Bank 31";
+BankLabel = "Node 1 Bank 31";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 32/Node 1 Bank 32";
+BankLabel = "Node 1 Bank 32";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 33/Node 1 Bank 33";
+BankLabel = "Node 1 Bank 33";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 34/Node 1 Bank 34";
+BankLabel = "Node 1 Bank 34";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 35/Node 1 Bank 35";
+BankLabel = "Node 1 Bank 35";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 36/Node 1 Bank 36";
+BankLabel = "Node 1 Bank 36";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 37/Node 1 Bank 37";
+BankLabel = "Node 1 Bank 37";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 38/Node 1 Bank 38";
+BankLabel = "Node 1 Bank 38";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 39/Node 1 Bank 39";
+BankLabel = "Node 1 Bank 39";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 4/Node 1 Bank 4";
+BankLabel = "Node 1 Bank 4";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 40/Node 1 Bank 40";
+BankLabel = "Node 1 Bank 40";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 41/Node 1 Bank 41";
+BankLabel = "Node 1 Bank 41";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 42/Node 1 Bank 42";
+BankLabel = "Node 1 Bank 42";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 43/Node 1 Bank 43";
+BankLabel = "Node 1 Bank 43";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 44/Node 1 Bank 44";
+BankLabel = "Node 1 Bank 44";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 45/Node 1 Bank 45";
+BankLabel = "Node 1 Bank 45";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 46/Node 1 Bank 46";
+BankLabel = "Node 1 Bank 46";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 47/Node 1 Bank 47";
+BankLabel = "Node 1 Bank 47";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 48/Node 1 Bank 48";
+BankLabel = "Node 1 Bank 48";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 5/Node 1 Bank 5";
+BankLabel = "Node 1 Bank 5";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 6/Node 1 Bank 6";
+BankLabel = "Node 1 Bank 6";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 7/Node 1 Bank 7";
+BankLabel = "Node 1 Bank 7";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 8/Node 1 Bank 8";
+BankLabel = "Node 1 Bank 8";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_MEMORY
+{
+Tag = "DIMM 9/Node 1 Bank 9";
+BankLabel = "Node 1 Bank 9";
+Capacity = "";
+MemoryType = "Unpopulated";
+MaxSpeed = "";
+ErrorMethodology = "";
+Manufacturer = "";
+PartNumber = "";
+SerialNumber = "";
+};
+instance of IBMUIMINV_BIOS_AND_UEFI
+{
+Name = "MegaRAID SAS1 BIOS";
+BuildNumber = "";
+Version = "5.30.00_4.12.05.00_0x05110000";
+ReleaseDate = null;
+};
+instance of IBMUIMINV_BIOS_AND_UEFI
+{
+Name = "UEFI";
+BuildNumber = "KOE111NUS";
+Version = "1.00";
+ReleaseDate = "20120426000000.000000+000";
+};
+instance of IBMUIMINV_FIRMWARE
+{
+Name = "IMM2";
+Manufacturer = "IBM eServer X";
+Version = "3.00";
+BuildNumber = "1AOO43Q";
+BuildDate = "20130529192634.000000+000";
+};
+instance of IBMUIMINV_FIRMWARE
+{
+Name = "Diagnostic VPD";
+Manufacturer = "";
+Version = "9.40";
+BuildNumber = "DSYTB7U";
+BuildDate = "20130515000000.000000+000";
+};
+instance of IBMUIMINV_FIRMWARE
+{
+Name = "MegaRAID SAS1 Firmware";
+Manufacturer = "LSI Logic Corporation";
+Version = "3.151.04-1463";
+BuildNumber = "";
+BuildDate = null;
+};
+instance of IBMUIMINV_FIRMWARE
+{
+Name = "MegaRAID SAS1 FW Package Build";
+Manufacturer = "LSI Logic Corporation";
+Version = "23.2.1-0024";
+BuildNumber = "";
+BuildDate = null;
+};
+instance of IBMUIMINV_FIRMWARE
+{
+Name = "MegaRAID Controller1 Physical Device1";
+Manufacturer = "IBM-ESXS";
+Version = "B617";
+BuildNumber = "";
+BuildDate = null;
+};
+instance of IBMUIMINV_FIRMWARE
+{
+Name = "MegaRAID Controller1 Physical Device2";
+Manufacturer = "IBM-ESXS";
+Version = "SB28";
+BuildNumber = "";
+BuildDate = null;
+};
+instance of IBMUIMINV_FIRMWARE
+{
+Name = "MegaRAID Controller1 Physical Device3";
+Manufacturer = "IBM-ESXS";
+Version = "B62C";
+BuildNumber = "";
+BuildDate = null;
+};
+instance of IBMUIMINV_FIRMWARE
+{
+Name = "MegaRAID Controller1 Physical Device4";
+Manufacturer = "IBM-ESXS";
+Version = "SC17";
+BuildNumber = "";
+BuildDate = null;
+};
+instance of IBMUIMINV_FIRMWARE
+{
+Name = "SCSI Device";
+Manufacturer = "IMM";
+Version = "0325";
+BuildNumber = "";
+BuildDate = null;
+};
+instance of IBMUIMINV_FIRMWARE
+{
+Name = "SCSI Device";
+Manufacturer = "HL-DT-ST";
+Version = "IS09";
+BuildNumber = "";
+BuildDate = null;
+};
+instance of IBMUIMINV_FIRMWARE
+{
+Name = "SCSI Device";
+Manufacturer = "IBM";
+Version = "3.15";
+BuildNumber = "";
+BuildDate = null;
+};
+instance of IBMUIMINV_FIRMWARE
+{
+Name = "SCSI Device";
+Manufacturer = "RAID";
+Version = "0001";
+BuildNumber = "";
+BuildDate = null;
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "1394ohci";
+Description = "1394 OHCI Compliant Host Controller";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192647.000245-420";
+Path = "c:\\windows\\system32\\drivers\\1394ohci.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "3ware";
+Description = "3ware";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "LSI";
+Version = "5.01.00.047";
+CreationTime = "20120725132242.000637-420";
+Path = "c:\\windows\\system32\\drivers\\3ware.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "ACPI";
+Description = "Microsoft ACPI Driver";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192829.000223-420";
+Path = "c:\\windows\\system32\\drivers\\acpi.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "AFD";
+Description = "Ancillary Function Driver for Winsock";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222647.000282-420";
+Path = "c:\\windows\\system32\\drivers\\afd.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "AcpiPmi";
+Description = "ACPI Power Meter Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192733.000827-420";
+Path = "c:\\windows\\system32\\drivers\\acpipmi.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "AmdK8";
+Description = "AMD K8 Processor Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192648.000805-420";
+Path = "c:\\windows\\system32\\drivers\\amdk8.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "AmdPPM";
+Description = "AMD Processor Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192648.000774-420";
+Path = "c:\\windows\\system32\\drivers\\amdppm.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "AppID";
+Description = "AppID Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192512.000553-420";
+Path = "c:\\windows\\system32\\drivers\\appid.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "AsyncMac";
+Description = "RAS Asynchronous Media Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192825.000510-420";
+Path = "c:\\windows\\system32\\drivers\\asyncmac.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "BasicDisplay";
+Description = "BasicDisplay";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192908.000893-420";
+Path = "c:\\windows\\system32\\drivers\\basicdisplay.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "BasicRender";
+Description = "BasicRender";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192852.000201-420";
+Path = "c:\\windows\\system32\\drivers\\basicrender.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Beep";
+Description = "Beep";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725193019.000920-420";
+Path = "c:\\windows\\system32\\drivers\\beep.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "CLFS";
+Description = "Common Log (CLFS)";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192941.000622-420";
+Path = "c:\\windows\\system32\\drivers\\clfs.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "CNG";
+Description = "CNG";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192637.000714-420";
+Path = "c:\\windows\\system32\\drivers\\cng.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "CmBatt";
+Description = "Microsoft ACPI Control Method Battery Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192921.000030-420";
+Path = "c:\\windows\\system32\\drivers\\cmbatt.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "CompositeBus";
+Description = "Composite Bus Enumerator Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192803.000873-420";
+Path = "c:\\windows\\system32\\drivers\\compositebus.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "DXGKrnl";
+Description = "LDDM Graphics Subsystem";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192629.000352-420";
+Path = "c:\\windows\\system32\\drivers\\dxgkrnl.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Dfsc";
+Description = "DFS Namespace Client Driver";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192653.000407-420";
+Path = "c:\\windows\\system32\\drivers\\dfsc.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "ErrDev";
+Description = "Microsoft Hardware Error Device Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192714.000077-420";
+Path = "c:\\windows\\system32\\drivers\\errdev.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "FileInfo";
+Description = "File Information FS MiniFilter";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192803.000061-420";
+Path = "c:\\windows\\system32\\drivers\\fileinfo.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Filetrace";
+Description = "Filetrace";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192909.000876-420";
+Path = "c:\\windows\\system32\\drivers\\filetrace.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "FltMgr";
+Description = "FltMgr";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222646.000502-420";
+Path = "c:\\windows\\system32\\drivers\\fltmgr.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "FsDepends";
+Description = "File System Dependency Minifilter";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192911.000514-420";
+Path = "c:\\windows\\system32\\drivers\\fsdepends.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "FxPPM";
+Description = "Power Framework Processor Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192758.000600-420";
+Path = "c:\\windows\\system32\\drivers\\fxppm.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "GPIOClx0101";
+Description = "Microsoft GPIO Class Extension Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192614.000126-420";
+Path = "c:\\windows\\system32\\drivers\\msgpioclx.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "HDAudBus";
+Description = "Microsoft UAA Bus Driver for High Definition Audio";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192736.000573-420";
+Path = "c:\\windows\\system32\\drivers\\hdaudbus.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "HTTP";
+Description = "HTTP Service";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192458.000653-420";
+Path = "c:\\windows\\system32\\drivers\\http.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "HidBatt";
+Description = "HID UPS Battery Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192845.000712-420";
+Path = "c:\\windows\\system32\\drivers\\hidbatt.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "HidUsb";
+Description = "Microsoft HID Class Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192826.000134-420";
+Path = "c:\\windows\\system32\\drivers\\hidusb.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "HpSAMD";
+Description = "HpSAMD";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Hewlett-Packard Company";
+Version = "7.0.12.0 Build 1 Media Driver (x86-64) (NT.120402-1650)";
+CreationTime = "20120725132239.000891-420";
+Path = "c:\\windows\\system32\\drivers\\hpsamd.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "HyperVideo";
+Description = "HyperVideo";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192903.000589-420";
+Path = "c:\\windows\\system32\\drivers\\hypervideo.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "IPMIDRV";
+Description = "IPMIDRV";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192818.000739-420";
+Path = "c:\\windows\\system32\\drivers\\ipmidrv.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "IPNAT";
+Description = "IP Network Address Translator";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192301.000450-420";
+Path = "c:\\windows\\system32\\drivers\\ipnat.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "IpFilterDriver";
+Description = "IP Traffic Filter Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192303.000524-420";
+Path = "c:\\windows\\system32\\drivers\\ipfltdrv.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "KSecDD";
+Description = "KSecDD";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222647.000797-420";
+Path = "c:\\windows\\system32\\drivers\\ksecdd.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "KSecPkg";
+Description = "KSecPkg";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192536.000437-420";
+Path = "c:\\windows\\system32\\drivers\\ksecpkg.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "LSI_FC";
+Description = "LSI_FC";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "LSI Corporation";
+Version = "1.34.02.05 (NT.100901-1031)";
+CreationTime = "20120725132242.000465-420";
+Path = "c:\\windows\\system32\\drivers\\lsi_fc.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "LSI_SAS";
+Description = "LSI_SAS";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "LSI Corporation";
+Version = "1.34.02.06 (NT.120402-1650)";
+CreationTime = "20120725132241.000810-420";
+Path = "c:\\windows\\system32\\drivers\\lsi_sas.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "LSI_SAS2";
+Description = "LSI_SAS2";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "LSI Corporation";
+Version = "2.00.55.84 (NT.100901-1031)";
+CreationTime = "20120725132242.000028-420";
+Path = "c:\\windows\\system32\\drivers\\lsi_sas2.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "LSI_SCSI";
+Description = "LSI_SCSI";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "LSI Corporation";
+Version = "1.34.02.05 (NT.100901-1031)";
+CreationTime = "20120725132241.000576-420";
+Path = "c:\\windows\\system32\\drivers\\lsi_scsi.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "LSI_SSS";
+Description = "LSI_SSS";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "LSI Corporation";
+Version = "2.10.60.00";
+CreationTime = "20130715101057.000954-420";
+Path = "c:\\windows\\system32\\drivers\\lsi_sss.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "MTConfig";
+Description = "Microsoft Input Configuration Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192611.000740-420";
+Path = "c:\\windows\\system32\\drivers\\mtconfig.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "MegaSR";
+Description = "MegaSR";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "LSI Corporation, Inc.";
+Version = "14.06.1007.2012";
+CreationTime = "20120725132241.000139-420";
+Path = "c:\\windows\\system32\\drivers\\megasr.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Modem";
+Description = "Modem";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725193007.000144-420";
+Path = "c:\\windows\\system32\\drivers\\modem.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "MsBridge";
+Description = "Microsoft MAC Bridge";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192318.000032-420";
+Path = "c:\\windows\\system32\\drivers\\bridge.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "MsLbfoProvider";
+Description = "Microsoft Load Balancing/Failover Provider";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192731.000737-420";
+Path = "c:\\windows\\system32\\drivers\\mslbfoprovider.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "MsRPC";
+Description = "MsRPC";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222646.000970-420";
+Path = "c:\\windows\\system32\\drivers\\msrpc.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Msfs";
+Description = "Msfs";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222646.000315-420";
+Path = "c:\\windows\\system32\\drivers\\msfs.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Mup";
+Description = "Mup";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725193001.000138-420";
+Path = "c:\\windows\\system32\\drivers\\mup.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "NDIS";
+Description = "NDIS System Driver";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222647.000157-420";
+Path = "c:\\windows\\system32\\drivers\\ndis.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "NDISWANLEGACY";
+Description = "Remote Access LEGACY NDIS WAN Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192314.000429-420";
+Path = "c:\\windows\\system32\\drivers\\ndiswan.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "NDProxy";
+Description = "NDIS Proxy";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192642.000051-420";
+Path = "c:\\windows\\system32\\drivers\\ndproxy.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "NdisCap";
+Description = "Microsoft NDIS Capture";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192730.000629-420";
+Path = "c:\\windows\\system32\\drivers\\ndiscap.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "NdisImPlatform";
+Description = "Microsoft Network Adapter Multiplexor Protocol";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192501.000321-420";
+Path = "c:\\windows\\system32\\drivers\\ndisimplatform.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "NdisTapi";
+Description = "Remote Access NDIS TAPI Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192840.000127-420";
+Path = "c:\\windows\\system32\\drivers\\ndistapi.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "NdisWan";
+Description = "Remote Access NDIS WAN Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192314.000429-420";
+Path = "c:\\windows\\system32\\drivers\\ndiswan.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Ndisuio";
+Description = "NDIS Usermode I/O Protocol";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192621.000755-420";
+Path = "c:\\windows\\system32\\drivers\\ndisuio.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "NetBIOS";
+Description = "NetBIOS Interface";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192820.000081-420";
+Path = "c:\\windows\\system32\\drivers\\netbios.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "NetBT";
+Description = "NetBT";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192428.000389-420";
+Path = "c:\\windows\\system32\\drivers\\netbt.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Npfs";
+Description = "Npfs";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222646.000112-420";
+Path = "c:\\windows\\system32\\drivers\\npfs.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Ntfs";
+Description = "Ntfs";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222646.000128-420";
+Path = "c:\\windows\\system32\\drivers\\ntfs.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Null";
+Description = "Null";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222646.000065-420";
+Path = "c:\\windows\\system32\\drivers\\null.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "PEAUTH";
+Description = "PEAUTH";
+CurrentState = "Running";
+StartupState = "Automatic";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192428.000108-420";
+Path = "c:\\windows\\system32\\drivers\\peauth.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Parport";
+Description = "Parallel port driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192953.000946-420";
+Path = "c:\\windows\\system32\\drivers\\parport.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "PptpMiniport";
+Description = "WAN Miniport (PPTP)";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192314.000429-420";
+Path = "c:\\windows\\system32\\drivers\\raspptp.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Processor";
+Description = "Processor Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192648.000868-420";
+Path = "c:\\windows\\system32\\drivers\\processr.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Psched";
+Description = "QoS Packet Scheduler";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192306.000395-420";
+Path = "c:\\windows\\system32\\drivers\\pacer.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "RDPDR";
+Description = "Remote Desktop Device Redirector Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192519.000526-420";
+Path = "c:\\windows\\system32\\drivers\\rdpdr.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "RDPWD";
+Description = "RDP Winstation Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192324.000584-420";
+Path = "c:\\windows\\system32\\drivers\\rdpwd.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "RasAcd";
+Description = "Remote Access Auto Connection Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192950.000296-420";
+Path = "c:\\windows\\system32\\drivers\\rasacd.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "RasAgileVpn";
+Description = "WAN Miniport (IKEv2)";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192312.000120-420";
+Path = "c:\\windows\\system32\\drivers\\agilevpn.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "RasPppoe";
+Description = "Remote Access PPPOE Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192456.000438-420";
+Path = "c:\\windows\\system32\\drivers\\raspppoe.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "RasSstp";
+Description = "WAN Miniport (SSTP)";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192359.000591-420";
+Path = "c:\\windows\\system32\\drivers\\rassstp.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Rasl2tp";
+Description = "WAN Miniport (L2TP)";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192317.000424-420";
+Path = "c:\\windows\\system32\\drivers\\rasl2tp.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "RdpVideoMiniport";
+Description = "Remote Desktop Video Miniport Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192831.000921-420";
+Path = "c:\\windows\\system32\\drivers\\rdpvideominiport.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "ReFS";
+Description = "ReFS";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192616.000576-420";
+Path = "c:\\windows\\system32\\drivers\\refs.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "SerCx";
+Description = "Serial UART Support Library";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192646.000559-420";
+Path = "c:\\windows\\system32\\drivers\\sercx.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Serenum";
+Description = "Serenum Filter Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725193014.000320-420";
+Path = "c:\\windows\\system32\\drivers\\serenum.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Serial";
+Description = "Serial port driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725193001.000949-420";
+Path = "c:\\windows\\system32\\drivers\\serial.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "SiSRaid2";
+Description = "SiSRaid2";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Silicon Integrated Systems Corp.";
+Version = "2.60.01 (NT.070926-1510)";
+CreationTime = "20120602073309.000013-420";
+Path = "c:\\windows\\system32\\drivers\\sisraid2.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "SiSRaid4";
+Description = "SiSRaid4";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Silicon Integrated Systems";
+Version = "3.60.03 (NT.070926-1510)";
+CreationTime = "20120725133706.000129-420";
+Path = "c:\\windows\\system32\\drivers\\sisraid4.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "SpbCx";
+Description = "Simple Peripheral Bus Support Library";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192643.000455-420";
+Path = "c:\\windows\\system32\\drivers\\spbcx.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "TCPIP6";
+Description = "Microsoft IPv6 Protocol Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222647.000485-420";
+Path = "c:\\windows\\system32\\drivers\\tcpip.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "TPM";
+Description = "TPM";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192528.000636-420";
+Path = "c:\\windows\\system32\\drivers\\tpm.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Tcpip";
+Description = "TCP/IP Protocol Driver";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222647.000485-420";
+Path = "c:\\windows\\system32\\drivers\\tcpip.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "TsUsbFlt";
+Description = "TsUsbFlt";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192556.000280-420";
+Path = "c:\\windows\\system32\\drivers\\tsusbflt.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "TsUsbGD";
+Description = "Remote Desktop Generic USB Device";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192634.000703-420";
+Path = "c:\\windows\\system32\\drivers\\tsusbgd.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "UASPStor";
+Description = "USB Attached SCSI (UAS) Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192705.000123-420";
+Path = "c:\\windows\\system32\\drivers\\uaspstor.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "UCX01000";
+Description = "USB Controller Extension";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192609.000696-420";
+Path = "c:\\windows\\system32\\drivers\\ucx01000.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "USBHUB3";
+Description = "SuperSpeed Hub";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192540.000555-420";
+Path = "c:\\windows\\system32\\drivers\\usbhub3.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "USBSTOR";
+Description = "USB Mass Storage Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192704.000936-420";
+Path = "c:\\windows\\system32\\drivers\\usbstor.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "USBXHCI";
+Description = "USB xHCI Compliant Host Controller";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192547.000310-420";
+Path = "c:\\windows\\system32\\drivers\\usbxhci.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "UmPass";
+Description = "Microsoft UMPass Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192737.000119-420";
+Path = "c:\\windows\\system32\\drivers\\umpass.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "VMBusHID";
+Description = "VMBusHID";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192734.000747-420";
+Path = "c:\\windows\\system32\\drivers\\vmbushid.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "VSTXRAID";
+Description = "VIA StorX Storage Controller Windows Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "VIA Corporation";
+Version = "8.0.8220.8080";
+CreationTime = "20120725133707.000424-420";
+Path = "c:\\windows\\system32\\drivers\\vstxraid.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "VerifierExt";
+Description = "VerifierExt";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192818.000693-420";
+Path = "c:\\windows\\system32\\drivers\\verifierext.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Vid";
+Description = "Vid";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192526.000811-420";
+Path = "c:\\windows\\system32\\drivers\\vid.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "WFLASH";
+Description = "WFLASH";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "";
+Version = "";
+CreationTime = "20130715145946.000690-420";
+Path = "c:\\users\\admini~1.scc\\appdata\\local\\temp\\1\\wflash.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "WFPLWFS";
+Description = "Microsoft Windows Filtering Platform";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192359.000435-420";
+Path = "c:\\windows\\system32\\drivers\\wfplwfs.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "WIMMount";
+Description = "WIMMount";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192945.000444-420";
+Path = "c:\\windows\\system32\\drivers\\wimmount.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "WacomPen";
+Description = "Wacom Serial Pen HID Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192909.000018-420";
+Path = "c:\\windows\\system32\\drivers\\wacompen.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Wanarp";
+Description = "Remote Access IP ARP Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192307.000580-420";
+Path = "c:\\windows\\system32\\drivers\\wanarp.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Wanarpv6";
+Description = "Remote Access IPv6 ARP Driver";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192307.000580-420";
+Path = "c:\\windows\\system32\\drivers\\wanarp.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Wd";
+Description = "Microsoft Watchdog Timer Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725193012.000885-420";
+Path = "c:\\windows\\system32\\drivers\\wd.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "Wdf01000";
+Description = "Kernel Mode Driver Frameworks service";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "1.11.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222646.000331-420";
+Path = "c:\\windows\\system32\\drivers\\wdf01000.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "WinMad";
+Description = "WinMad Service";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Mellanox";
+Version = "4.1.10092";
+CreationTime = "20120725132306.000754-420";
+Path = "c:\\windows\\system32\\drivers\\winmad.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "WinNat";
+Description = "Windows NAT Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192353.000538-420";
+Path = "c:\\windows\\system32\\drivers\\winnat.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "WinVerbs";
+Description = "WinVerbs Service";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Mellanox";
+Version = "4.1.10092";
+CreationTime = "20120725132308.000689-420";
+Path = "c:\\windows\\system32\\drivers\\winverbs.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "WmiAcpi";
+Description = "Microsoft Windows Management Interface for ACPI";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192953.000494-420";
+Path = "c:\\windows\\system32\\drivers\\wmiacpi.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "WudfPf";
+Description = "User Mode Driver Frameworks Platform Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192645.000639-420";
+Path = "c:\\windows\\system32\\drivers\\wudfpf.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "acpiex";
+Description = "Microsoft ACPIEx Driver";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192557.000309-420";
+Path = "c:\\windows\\system32\\drivers\\acpiex.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "acpipagr";
+Description = "ACPI Processor Aggregator Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192716.000636-420";
+Path = "c:\\windows\\system32\\drivers\\acpipagr.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "acpitime";
+Description = "ACPI Wake Alarm Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192737.000399-420";
+Path = "c:\\windows\\system32\\drivers\\acpitime.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "adp94xx";
+Description = "adp94xx";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Adaptec, Inc.";
+Version = "1.6.0006.4 (1.070926-1510)";
+CreationTime = "20120602073206.000035-420";
+Path = "c:\\windows\\system32\\drivers\\adp94xx.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "adpahci";
+Description = "adpahci";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Adaptec, Inc.";
+Version = "1.6.0006.1 (1.070222-1720)";
+CreationTime = "20120725133706.000909-420";
+Path = "c:\\windows\\system32\\drivers\\adpahci.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "adpu320";
+Description = "adpu320";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Adaptec, Inc.";
+Version = "7.2.000.000 (NT.070221-1245)";
+CreationTime = "20120725133707.000003-420";
+Path = "c:\\windows\\system32\\drivers\\adpu320.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "agp440";
+Description = "Intel AGP Bus Filter";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192913.000792-420";
+Path = "c:\\windows\\system32\\drivers\\agp440.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "amdsata";
+Description = "amdsata";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Advanced Micro Devices";
+Version = "1.1.4.6 (NT.120402-1650)";
+CreationTime = "20120623162450.000415-420";
+Path = "c:\\windows\\system32\\drivers\\amdsata.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "amdsbs";
+Description = "amdsbs";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "AMD Technologies Inc.";
+Version = "3.7.1540.30 (NT.100901-1031)";
+CreationTime = "20120602073306.000267-420";
+Path = "c:\\windows\\system32\\drivers\\amdsbs.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "amdxata";
+Description = "amdxata";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Advanced Micro Devices";
+Version = "1.1.4.6 (NT.120402-1650)";
+CreationTime = "20120725133705.000318-420";
+Path = "c:\\windows\\system32\\drivers\\amdxata.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "arc";
+Description = "arc";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "PMC-Sierra, Inc.";
+Version = "5.2.0.18702 (NT.100901-1031)";
+CreationTime = "20120725133707.000034-420";
+Path = "c:\\windows\\system32\\drivers\\arc.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "arcsas";
+Description = "Adaptec SAS/SATA-II RAID Windows Inbox Miniport Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "PMC-Sierra, Inc.";
+Version = "5.2.0.18702 (NT.100901-1031)";
+CreationTime = "20120725133707.000065-420";
+Path = "c:\\windows\\system32\\drivers\\arcsas.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "atapi";
+Description = "IDE Channel";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725201143.000655-420";
+Path = "c:\\windows\\system32\\drivers\\atapi.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "b06bdrv";
+Description = "Broadcom NetXtreme II VBD";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Broadcom Corporation";
+Version = "7.0.1.35";
+CreationTime = "20120623162450.000181-420";
+Path = "c:\\windows\\system32\\drivers\\bxvbda.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "be2net";
+Description = "Emulex 10Gb NIC";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Emulex";
+Version = "4.0.121.3219";
+CreationTime = "20120602073137.000408-420";
+Path = "c:\\windows\\system32\\drivers\\ocnd63.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "bfad";
+Description = "Brocade 425/825 4G/8G FC HBA driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Brocade Communications Systems, Inc.";
+Version = "3.0.2.21";
+CreationTime = "20120619132800.000008-420";
+Path = "c:\\windows\\system32\\drivers\\bfad.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "bfadfcoe";
+Description = "Brocade 10G FCoE HBA driver service";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Brocade Communications Systems, Inc.";
+Version = "3.0.2.21";
+CreationTime = "20120725132240.000312-420";
+Path = "c:\\windows\\system32\\drivers\\bfadfcoe.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "bowser";
+Description = "Browser Support Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192801.000657-420";
+Path = "c:\\windows\\system32\\drivers\\bowser.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "bxfcoe";
+Description = "Broadcom NetXtreme II Offload FCoE Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Broadcom Corporation";
+Version = "7.0.16.50";
+CreationTime = "20120602073215.000972-420";
+Path = "c:\\windows\\system32\\drivers\\bxfcoe.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "bxois";
+Description = "Broadcom NetXtreme II Offload iSCSI Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Broadcom Corporation";
+Version = "7.0.13.50";
+CreationTime = "20120725132239.000922-420";
+Path = "c:\\windows\\system32\\drivers\\bxois.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "cdfs";
+Description = "CD/DVD File System Reader";
+CurrentState = "Stopped";
+StartupState = "Disabled";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725193010.000264-420";
+Path = "c:\\windows\\system32\\drivers\\cdfs.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "cdrom";
+Description = "CD-ROM Driver";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192636.000762-420";
+Path = "c:\\windows\\system32\\drivers\\cdrom.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "condrv";
+Description = "Console Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222645.000894-420";
+Path = "c:\\windows\\system32\\drivers\\condrv.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "discache";
+Description = "System Attribute Cache";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192824.000012-420";
+Path = "c:\\windows\\system32\\drivers\\discache.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "disk";
+Description = "Disk Driver";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192926.000490-420";
+Path = "c:\\windows\\system32\\drivers\\disk.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "dmvsc";
+Description = "dmvsc";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192557.000918-420";
+Path = "c:\\windows\\system32\\drivers\\dmvsc.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "ebdrv";
+Description = "Broadcom NetXtreme II 10 GigE VBD";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Broadcom Corporation";
+Version = "7.0.35.94";
+CreationTime = "20120623162450.000290-420";
+Path = "c:\\windows\\system32\\drivers\\evbda.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "elxfcoe";
+Description = "elxfcoe";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Emulex";
+Version = "2.72.205.004 06/05/2012 WIN8 64 bit x64 (NT.120402-1650)";
+CreationTime = "20120725132239.000829-420";
+Path = "c:\\windows\\system32\\drivers\\elxfcoe.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "elxstor";
+Description = "elxstor";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Emulex";
+Version = "2.72.205.004 06/05/2012 WIN8 64 bit x64 (NT.120402-1650)";
+CreationTime = "20120623162451.000320-420";
+Path = "c:\\windows\\system32\\drivers\\elxstor.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "exfat";
+Description = "exFAT File System Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725193023.000087-420";
+Path = "c:\\windows\\system32\\drivers\\exfat.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "fastfat";
+Description = "FAT12/16/32 File System Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725193023.000695-420";
+Path = "c:\\windows\\system32\\drivers\\fastfat.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "fcvsc";
+Description = "fcvsc";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192622.000784-420";
+Path = "c:\\windows\\system32\\drivers\\fcvsc.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "fdc";
+Description = "Floppy Disk Controller Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725193015.000381-420";
+Path = "c:\\windows\\system32\\drivers\\fdc.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "flpydisk";
+Description = "Floppy Disk Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725193015.000427-420";
+Path = "c:\\windows\\system32\\drivers\\flpydisk.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "gagp30kx";
+Description = "Microsoft Generic AGPv3.0 Filter for K8 Processor Platforms";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192915.000024-420";
+Path = "c:\\windows\\system32\\drivers\\gagp30kx.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "gencounter";
+Description = "Microsoft Hyper-V Generation Counter";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192758.000818-420";
+Path = "c:\\windows\\system32\\drivers\\vmgencounter.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "hal";
+Description = "hal";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222645.000722-420";
+Path = "c:\\windows\\system32\\hal.dll";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "hwpolicy";
+Description = "Hardware Policy Driver";
+CurrentState = "Stopped";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192951.000419-420";
+Path = "c:\\windows\\system32\\drivers\\hwpolicy.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "hyperkbd";
+Description = "hyperkbd";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192701.000098-420";
+Path = "c:\\windows\\system32\\drivers\\hyperkbd.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "i8042prt";
+Description = "i8042 Keyboard and PS/2 Mouse Port Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192851.000827-420";
+Path = "c:\\windows\\system32\\drivers\\i8042prt.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "iScsiPrt";
+Description = "iScsiPort Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "";
+Version = "";
+CreationTime = null;
+Path = "";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "iaStorV";
+Description = "Intel RAID Controller Windows 7";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Intel Corporation";
+Version = "8.6.2.1019";
+CreationTime = "20120602073222.000945-420";
+Path = "c:\\windows\\system32\\drivers\\iastorv.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "ibbus";
+Description = "Mellanox InfiniBand Bus/AL (Filter Driver)";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Mellanox";
+Version = "4.1.10092";
+CreationTime = "20120725132259.000531-420";
+Path = "c:\\windows\\system32\\drivers\\ibbus.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "iirsp";
+Description = "iirsp";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Intel Corp./ICP vortex GmbH";
+Version = "5.4.22.0";
+CreationTime = "20120725133707.000081-420";
+Path = "c:\\windows\\system32\\drivers\\iirsp.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "intelide";
+Description = "intelide";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725201143.000842-420";
+Path = "c:\\windows\\system32\\drivers\\intelide.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "intelppm";
+Description = "Intel Processor Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192648.000774-420";
+Path = "c:\\windows\\system32\\drivers\\intelppm.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "isapnp";
+Description = "isapnp";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725193003.000072-420";
+Path = "c:\\windows\\system32\\drivers\\isapnp.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "kbdclass";
+Description = "Keyboard Class Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192848.000286-420";
+Path = "c:\\windows\\system32\\drivers\\kbdclass.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "kbdhid";
+Description = "Keyboard HID Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192849.000581-420";
+Path = "c:\\windows\\system32\\drivers\\kbdhid.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "kdnic";
+Description = "Microsoft Kernel Debug Network Miniport (NDIS 6.20)";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.01.00.0000 (win8_rtm.120725-1247)";
+CreationTime = "20120725192741.000221-420";
+Path = "c:\\windows\\system32\\drivers\\kdnic.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "ksthunk";
+Description = "Kernel Streaming Thunks";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192859.000034-420";
+Path = "c:\\windows\\system32\\drivers\\ksthunk.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "lltdio";
+Description = "Link-Layer Topology Discovery Mapper I/O Driver";
+CurrentState = "Running";
+StartupState = "Automatic";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192403.000772-420";
+Path = "c:\\windows\\system32\\drivers\\lltdio.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "luafv";
+Description = "UAC File Virtualization";
+CurrentState = "Running";
+StartupState = "Automatic";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192914.000166-420";
+Path = "c:\\windows\\system32\\drivers\\luafv.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "megasas";
+Description = "megasas";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "LSI Corporation";
+Version = "5.2.121.64 (NT.120402-1650)";
+CreationTime = "20120602073239.000887-420";
+Path = "c:\\windows\\system32\\drivers\\megasas.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "megasr1";
+Description = "megasr1";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "LSI Corporation, Inc.";
+Version = "15.00.0811.2012";
+CreationTime = "20130715101057.000532-420";
+Path = "c:\\windows\\system32\\drivers\\megasr1.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "mlx4_bus";
+Description = "Mellanox ConnectX Bus Enumerator";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Mellanox";
+Version = "4.1.10092";
+CreationTime = "20120725132303.000509-420";
+Path = "c:\\windows\\system32\\drivers\\mlx4_bus.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "monitor";
+Description = "Microsoft Monitor Class Function Driver Service";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192455.000923-420";
+Path = "c:\\windows\\system32\\drivers\\monitor.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "mouclass";
+Description = "Mouse Class Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192847.000350-420";
+Path = "c:\\windows\\system32\\drivers\\mouclass.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "mouhid";
+Description = "Mouse HID Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192847.000443-420";
+Path = "c:\\windows\\system32\\drivers\\mouhid.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "mountmgr";
+Description = "Mount Point Manager";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222645.000863-420";
+Path = "c:\\windows\\system32\\drivers\\mountmgr.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "mpsdrv";
+Description = "Windows Firewall Authorization Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192339.000810-420";
+Path = "c:\\windows\\system32\\drivers\\mpsdrv.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "mrxsmb";
+Description = "SMB MiniRedirector Wrapper and Engine";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192326.000113-420";
+Path = "c:\\windows\\system32\\drivers\\mrxsmb.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "mrxsmb10";
+Description = "SMB 1.x MiniRedirector";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192306.000972-420";
+Path = "c:\\windows\\system32\\drivers\\mrxsmb10.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "mrxsmb20";
+Description = "SMB 2.0 MiniRedirector";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192700.000615-420";
+Path = "c:\\windows\\system32\\drivers\\mrxsmb20.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "mshidkmdf";
+Description = "Pass-through HID to KMDF Filter Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192925.000102-420";
+Path = "c:\\windows\\system32\\drivers\\mshidkmdf.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "mshidumdf";
+Description = "Pass-through HID to UMDF Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192914.000572-420";
+Path = "c:\\windows\\system32\\drivers\\mshidumdf.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "msisadrv";
+Description = "msisadrv";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192802.000328-420";
+Path = "c:\\windows\\system32\\drivers\\msisadrv.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "mssmbios";
+Description = "Microsoft System Management BIOS Driver";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192920.000032-420";
+Path = "c:\\windows\\system32\\drivers\\mssmbios.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "mvumis";
+Description = "mvumis";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Marvell Semiconductor, Inc.";
+Version = "1.0.5.0007  (fbl_core2_sfs_dev2(atishayk).120306-1244)";
+CreationTime = "20120602073243.000693-420";
+Path = "c:\\windows\\system32\\drivers\\mvumis.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "nfrd960";
+Description = "nfrd960";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "IBM Corporation";
+Version = "7.10.56 (NT.060601-1710)";
+CreationTime = "20120725133707.000127-420";
+Path = "c:\\windows\\system32\\drivers\\nfrd960.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "npsvctrig";
+Description = "Named pipe service trigger provider";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192733.000827-420";
+Path = "c:\\windows\\system32\\drivers\\npsvctrig.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "nsiproxy";
+Description = "NSI Proxy Service Driver";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222647.000984-420";
+Path = "c:\\windows\\system32\\drivers\\nsiproxy.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "nv_agp";
+Description = "NVIDIA nForce AGP Bus Filter";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192916.000849-420";
+Path = "c:\\windows\\system32\\drivers\\nv_agp.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "nvraid";
+Description = "nvraid";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "NVIDIA Corporation";
+Version = "10.6.0.22 (NT.100901-1031)";
+CreationTime = "20120725133705.000552-420";
+Path = "c:\\windows\\system32\\drivers\\nvraid.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "nvstor";
+Description = "nvstor";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "NVIDIA Corporation";
+Version = "10.6.0.22 (NT.100901-1031)";
+CreationTime = "20120602073305.000549-420";
+Path = "c:\\windows\\system32\\drivers\\nvstor.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "partmgr";
+Description = "Partition Manager";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222645.000831-420";
+Path = "c:\\windows\\system32\\drivers\\partmgr.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "pci";
+Description = "PCI Bus Driver";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192744.000747-420";
+Path = "c:\\windows\\system32\\drivers\\pci.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "pciide";
+Description = "pciide";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725201143.000920-420";
+Path = "c:\\windows\\system32\\drivers\\pciide.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "pcmcia";
+Description = "pcmcia";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192945.000335-420";
+Path = "c:\\windows\\system32\\drivers\\pcmcia.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "pcw";
+Description = "Performance Counters for Windows Driver";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192844.000464-420";
+Path = "c:\\windows\\system32\\drivers\\pcw.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "pdc";
+Description = "pdc";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192810.000815-420";
+Path = "c:\\windows\\system32\\drivers\\pdc.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "prepdrvr";
+Description = "SMS Process Event Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "5.00.7652.0000 built by: jiedu";
+CreationTime = "20121121215336.000000-480";
+Path = "c:\\windows\\system32\\drivers\\prepdrv.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "ql2300";
+Description = "QLogic Fibre Channel STOR Miniport Driver (wx64)";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "QLogic Corporation";
+Version = "9.1.10.27";
+CreationTime = "20130715101058.000579-420";
+Path = "c:\\windows\\system32\\drivers\\ql2300.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "ql40xx";
+Description = "QLogic iSCSI Miniport Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "QLogic Corporation";
+Version = "2.1.5.10 (STOR wx64)";
+CreationTime = "20120725132241.000576-420";
+Path = "c:\\windows\\system32\\drivers\\ql40xx.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "rdbss";
+Description = "Redirected Buffering Sub System";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192600.000851-420";
+Path = "c:\\windows\\system32\\drivers\\rdbss.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "rdpbus";
+Description = "Remote Desktop Device Redirector Bus Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192819.000972-420";
+Path = "c:\\windows\\system32\\drivers\\rdpbus.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "rspndr";
+Description = "Link-Layer Topology Discovery Responder";
+CurrentState = "Running";
+StartupState = "Automatic";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192406.000393-420";
+Path = "c:\\windows\\system32\\drivers\\rspndr.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "s3cap";
+Description = "s3cap";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192816.000509-420";
+Path = "c:\\windows\\system32\\drivers\\vms3cap.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "sacdrv";
+Description = "sacdrv";
+CurrentState = "Stopped";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192323.000570-420";
+Path = "c:\\windows\\system32\\drivers\\sacdrv.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "sbp2port";
+Description = "SBP-2 Transport/Protocol Bus Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192848.000317-420";
+Path = "c:\\windows\\system32\\drivers\\sbp2port.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "scfilter";
+Description = "Smart card PnP Class Filter Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192805.000386-420";
+Path = "c:\\windows\\system32\\drivers\\scfilter.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "scsiport";
+Description = "SCSI Port Driver";
+CurrentState = "";
+StartupState = "";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725220056.000036-420";
+Path = "c:\\windows\\system32\\drivers\\scsiport.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "sdbus";
+Description = "sdbus";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192850.000673-420";
+Path = "c:\\windows\\system32\\drivers\\sdbus.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "sdstor";
+Description = "SD Storage Port Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192912.000060-420";
+Path = "c:\\windows\\system32\\drivers\\sdstor.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "secdrv";
+Description = "Security Driver";
+CurrentState = "Running";
+StartupState = "Automatic";
+Manufacturer = "Macrovision Corporation, Macrovision Europe Limited, and Macrovision Japan and Asia K.K.";
+Version = "4.03.086";
+CreationTime = "20120726010504.000423-420";
+Path = "c:\\windows\\system32\\drivers\\secdrv.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "sermouse";
+Description = "Serial Mouse Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192950.000811-420";
+Path = "c:\\windows\\system32\\drivers\\sermouse.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "sfloppy";
+Description = "High-Capacity Floppy Disk Drive";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192947.000893-420";
+Path = "c:\\windows\\system32\\drivers\\sfloppy.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "smbdirect";
+Description = "smbdirect";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192504.000690-420";
+Path = "c:\\windows\\system32\\drivers\\smbdirect.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "spaceport";
+Description = "Storage Spaces Driver";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192836.000586-420";
+Path = "c:\\windows\\system32\\drivers\\spaceport.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "srv";
+Description = "Server SMB 1.xxx Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192531.000647-420";
+Path = "c:\\windows\\system32\\drivers\\srv.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "srv2";
+Description = "Server SMB 2.xxx Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192533.000441-420";
+Path = "c:\\windows\\system32\\drivers\\srv2.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "srvnet";
+Description = "srvnet";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192319.000780-420";
+Path = "c:\\windows\\system32\\drivers\\srvnet.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "stexstor";
+Description = "stexstor";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Promise Technology, Inc.";
+Version = "5.1.0000.9 (1.100901-1031)";
+CreationTime = "20120725132241.000092-420";
+Path = "c:\\windows\\system32\\drivers\\stexstor.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "storahci";
+Description = "Microsoft Standard SATA AHCI Driver";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725193036.000004-420";
+Path = "c:\\windows\\system32\\drivers\\storahci.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "storflt";
+Description = "Hyper-V Storage Accelerator";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192547.000996-420";
+Path = "c:\\windows\\system32\\drivers\\vmstorfl.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "storport";
+Description = "storport";
+CurrentState = "";
+StartupState = "";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725220057.000986-420";
+Path = "c:\\windows\\system32\\drivers\\storport.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "storvsc";
+Description = "storvsc";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192651.000879-420";
+Path = "c:\\windows\\system32\\drivers\\storvsc.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "storvsp";
+Description = "storvsp";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192523.000301-420";
+Path = "c:\\windows\\system32\\drivers\\storvsp.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "swenum";
+Description = "Software Bus Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192853.000886-420";
+Path = "c:\\windows\\system32\\drivers\\swenum.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "tape";
+Description = "SCSI Tape Class Driver";
+CurrentState = "";
+StartupState = "";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192913.000168-420";
+Path = "c:\\windows\\system32\\drivers\\tape.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "tcpipreg";
+Description = "TCP/IP Registry Compatibility";
+CurrentState = "Running";
+StartupState = "Automatic";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192314.000413-420";
+Path = "c:\\windows\\system32\\drivers\\tcpipreg.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "tdx";
+Description = "NetIO Legacy TDI Support Driver";
+CurrentState = "Running";
+StartupState = "System Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725222647.000095-420";
+Path = "c:\\windows\\system32\\drivers\\tdx.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "terminpt";
+Description = "Microsoft Remote Desktop Input Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192853.000871-420";
+Path = "c:\\windows\\system32\\drivers\\terminpt.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "tsusbhub";
+Description = "tsusbhub";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192342.000478-420";
+Path = "c:\\windows\\system32\\drivers\\tsusbhub.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "tunnel";
+Description = "Microsoft Tunnel Miniport Adapter Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192305.000740-420";
+Path = "c:\\windows\\system32\\drivers\\tunnel.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "uagp35";
+Description = "Microsoft AGPv3.5 Filter";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192914.000104-420";
+Path = "c:\\windows\\system32\\drivers\\uagp35.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "udfs";
+Description = "udfs";
+CurrentState = "Stopped";
+StartupState = "Disabled";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725193019.000125-420";
+Path = "c:\\windows\\system32\\drivers\\udfs.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "uliagpkx";
+Description = "Uli AGP Bus Filter";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192915.000633-420";
+Path = "c:\\windows\\system32\\drivers\\uliagpkx.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "umbus";
+Description = "UMBus Enumerator Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192739.000334-420";
+Path = "c:\\windows\\system32\\drivers\\umbus.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "usbccgp";
+Description = "Microsoft USB Generic Parent Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192707.000791-420";
+Path = "c:\\windows\\system32\\drivers\\usbccgp.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "usbehci";
+Description = "Microsoft USB 2.0 Enhanced Host Controller Miniport Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192849.000284-420";
+Path = "c:\\windows\\system32\\drivers\\usbehci.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "usbhub";
+Description = "Microsoft USB Standard Hub Driver";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192835.000416-420";
+Path = "c:\\windows\\system32\\drivers\\usbhub.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "usbohci";
+Description = "Microsoft USB Open Host Controller Miniport Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192859.000923-420";
+Path = "c:\\windows\\system32\\drivers\\usbohci.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "usbprint";
+Description = "Microsoft USB PRINTER Class";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192451.000586-420";
+Path = "c:\\windows\\system32\\drivers\\usbprint.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "usbrndis6";
+Description = "USB RNDIS6 Adapter";
+CurrentState = "Running";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192730.000629-420";
+Path = "c:\\windows\\system32\\drivers\\usb80236.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "usbuhci";
+Description = "Microsoft USB Universal Host Controller Miniport Driver";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192900.000750-420";
+Path = "c:\\windows\\system32\\drivers\\usbuhci.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "vdrvroot";
+Description = "Microsoft Virtual Drive Enumerator";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192730.000629-420";
+Path = "c:\\windows\\system32\\drivers\\vdrvroot.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "vhdmp";
+Description = "vhdmp";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192545.000110-420";
+Path = "c:\\windows\\system32\\drivers\\vhdmp.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "viaide";
+Description = "viaide";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "VIA Technologies, Inc.";
+Version = "6,0,6000,170";
+CreationTime = "20120725201143.000951-420";
+Path = "c:\\windows\\system32\\drivers\\viaide.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "vmbus";
+Description = "Virtual Machine Bus";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192511.000274-420";
+Path = "c:\\windows\\system32\\drivers\\vmbus.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "vmbusr";
+Description = "Virtual Machine Bus Provider";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192513.000036-420";
+Path = "c:\\windows\\system32\\drivers\\vmbusr.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "volmgr";
+Description = "Volume Manager Driver";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192922.000746-420";
+Path = "c:\\windows\\system32\\drivers\\volmgr.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "volmgrx";
+Description = "Dynamic Volume Manager";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725193001.000933-420";
+Path = "c:\\windows\\system32\\drivers\\volmgrx.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "volsnap";
+Description = "Storage volumes";
+CurrentState = "Running";
+StartupState = "Boot Start";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725193027.000393-420";
+Path = "c:\\windows\\system32\\drivers\\volsnap.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "vpci";
+Description = "Microsoft Hyper-V Virtual PCI Bus";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192512.000990-420";
+Path = "c:\\windows\\system32\\drivers\\vpci.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "vpcivsp";
+Description = "Microsoft Hyper-V PCI Server";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192513.000005-420";
+Path = "c:\\windows\\system32\\drivers\\vpcivsp.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "vsmraid";
+Description = "vsmraid";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "VIA Technologies Inc.,Ltd";
+Version = "7.0.8140,6290";
+CreationTime = "20120602073309.000715-420";
+Path = "c:\\windows\\system32\\drivers\\vsmraid.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "ws2ifsl";
+Description = "Winsock IFS Driver";
+CurrentState = "Stopped";
+StartupState = "Disabled";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192929.000813-420";
+Path = "c:\\windows\\system32\\drivers\\ws2ifsl.sys";
+};
+instance of IBMUIMINV_DEVICEDRIVERS
+{
+Name = "wtlmdrv";
+Description = "Microsoft iSCSI Target LocalMount Adapter";
+CurrentState = "Stopped";
+StartupState = "Manual";
+Manufacturer = "Microsoft Corporation";
+Version = "6.2.9200.16384 (win8_rtm.120725-1247)";
+CreationTime = "20120725192854.000697-420";
+Path = "c:\\windows\\system32\\drivers\\wtlmdrv.sys";
+};
+instance of IBMUIMINV_FODKEY
+{
+Description = "ServeRAID M5100 Series Performance Key for IBM";
+FeatureDescription = "N/A";
+Status = "Expired";
+};
+instance of IBMUIMINV_LSICONTROLLERINFORMATION
+{
+LSIControllerNumber = "#0";
+ElementName = "ServeRAID M5110e(17,0)";
+ModuleName = "ServeRAID M5110e";
+BIOSVersion = "5.30.00_4.12.05.00_0x05110000";
+FirmwareVersion = "3.151.04-1463";
+FWPackageBuildversion = "23.2.1-0024";
+};
+instance of IBMUIMINV_LSILOGICALDRIVES
+{
+DiskName = "Disk Drive_62_1";
+LSIControllerNumber = "#0";
+LogicalName = "6005076043C00990FF0001AD199E71BE";
+ModuleName = "ServeRAID M5110e";
+OperationalStatus = "OK";
+RAIDLevel = "RAID 0";
+};
+instance of IBMUIMINV_LSILOGICALDRIVES
+{
+DiskName = "Disk Drive_62_3";
+LSIControllerNumber = "#0";
+LogicalName = "6005076043C00990FF0001AD199E71BE";
+ModuleName = "ServeRAID M5110e";
+OperationalStatus = "OK";
+RAIDLevel = "RAID 0";
+};
+instance of IBMUIMINV_LSILOGICALDRIVES
+{
+DiskName = "Disk Drive_62_5";
+LSIControllerNumber = "#0";
+LogicalName = "6005076043C00990FF0001AD199E71BE";
+ModuleName = "ServeRAID M5110e";
+OperationalStatus = "OK";
+RAIDLevel = "RAID 0";
+};
+instance of IBMUIMINV_LSILOGICALDRIVES
+{
+DiskName = "Disk Drive_62_6";
+LSIControllerNumber = "#0";
+LogicalName = "6005076043C00990FF0001AD199E71BE";
+ModuleName = "ServeRAID M5110e";
+OperationalStatus = "OK";
+RAIDLevel = "RAID 0";
+};
+instance of IBMUIMINV_LSIPHYSICALDRIVES
+{
+DiskName = "Disk Drive_62_1";
+LSIControllerNumber = "#0";
+ModuleName = "ServeRAID M5110e";
+ElementName = "Disk Slot 1 Tray 62";
+OperationalStatus = "OK";
+FRUNumber = "42D0638";
+BlockSize = "512 Bytes";
+NumberOfBlocks = "585937500";
+Manufacturer = "IBM-ESXS";
+FirmwareVersion = "SB28";
+};
+instance of IBMUIMINV_LSIPHYSICALDRIVES
+{
+DiskName = "Disk Drive_62_3";
+LSIControllerNumber = "#0";
+ModuleName = "ServeRAID M5110e";
+ElementName = "Disk Slot 0 Tray 62";
+OperationalStatus = "OK";
+FRUNumber = "43X0847";
+BlockSize = "512 Bytes";
+NumberOfBlocks = "143374000";
+Manufacturer = "IBM-ESXS";
+FirmwareVersion = "B617";
+};
+instance of IBMUIMINV_LSIPHYSICALDRIVES
+{
+DiskName = "Disk Drive_62_5";
+LSIControllerNumber = "#0";
+ModuleName = "ServeRAID M5110e";
+ElementName = "Disk Slot 3 Tray 62";
+OperationalStatus = "OK";
+FRUNumber = "43X0847";
+BlockSize = "512 Bytes";
+NumberOfBlocks = "143374000";
+Manufacturer = "IBM-ESXS";
+FirmwareVersion = "SC17";
+};
+instance of IBMUIMINV_LSIPHYSICALDRIVES
+{
+DiskName = "Disk Drive_62_6";
+LSIControllerNumber = "#0";
+ModuleName = "ServeRAID M5110e";
+ElementName = "Disk Slot 2 Tray 62";
+OperationalStatus = "OK";
+FRUNumber = "43X0847";
+BlockSize = "512 Bytes";
+NumberOfBlocks = "143374000";
+Manufacturer = "IBM-ESXS";
+FirmwareVersion = "B62C";
+};
+instance of IBMUIMINV_PMCAPPLICATIONSOFTWARE
+{
+Name = "RmLib";
+Version = "";
+};
+instance of IBMUIMINV_PMCAPPLICATIONSOFTWARE
+{
+Name = "SMI-S Provider";
+Version = "1.15.0.2";
+};
+instance of IBMUIMINV_IMMCONFIGIPV4_DHCP
+{
+Address = "9.115.252.134";
+SubnetMask = "255.255.252.0";
+SystemName = "Management Controller UUID-614C721C3D1711E198CDE41F13DA1082";
+};
+instance of IBMUIMINV_IMMCONFIGIPV6_STATELESS
+{
+Address = "2002:97b:c2bb:830:e61f:13ff:fed9:99d";
+PrefixLength = "0";
+SystemName = "Management Controller UUID-614C721C3D1711E198CDE41F13DA1082";
+};
+instance of IBMUIMINV_IMMCONFIGIPV6_STATELESS
+{
+Address = "2002:977:290a:5:e61f:13ff:fed9:99d";
+PrefixLength = "0";
+SystemName = "Management Controller UUID-614C721C3D1711E198CDE41F13DA1082";
+};
+instance of IBMUIMINV_IMMCONFIGIPV6_STATELESS
+{
+Address = "2002:973:fc11:5:e61f:13ff:fed9:99d";
+PrefixLength = "0";
+SystemName = "Management Controller UUID-614C721C3D1711E198CDE41F13DA1082";
+};
+instance of IBMUIMINV_IMMCONFIGIPV6_STATELESS
+{
+Address = "fec0::5:e61f:13ff:fed9:99d";
+PrefixLength = "0";
+SystemName = "Management Controller UUID-614C721C3D1711E198CDE41F13DA1082";
+};
+instance of IBMUIMINV_IMMCONFIGIPV6_LOCALLINK
+{
+Address = "fe80::e61f:13ff:fed9:99d";
+PrefixLength = "0";
+SystemName = "Management Controller UUID-614C721C3D1711E198CDE41F13DA1082";
+};
+instance of IBMUIMINV_IMMCONFIGIPV6_STATIC
+{
+Address = "::";
+PrefixLength = "64";
+Gateway = "::";
+};
+

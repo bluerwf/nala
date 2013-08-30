@@ -1,0 +1,112 @@
+<!-- TITLE AND SCORE LEGEND STARTS HERE -->
+<form>
+<script language="JavaScript" id="jsCalendars">
+   var calFromDate = new CalendarPopup("divFromDate");
+/*   calFromDate.showNavigationDropdowns(); */
+   calFromDate.showYearNavigation();
+   calFromDate.setReturnFunction("updateFirstToShow");
+   calFromDate.offsetX = 30;
+   calFromDate.setWeekStartDay(1);
+
+   var calToDate = new CalendarPopup("divToDate");
+/*   calToDate.showNavigationDropdowns(); */
+   calToDate.showYearNavigation();
+   calToDate.setReturnFunction("updateLastToShow");
+   calToDate.offsetX = 30;
+   calToDate.setWeekStartDay(1);
+
+   window.onload = init;
+</script>
+
+<table cellspacing="5" cellpadding="5" width="100%">
+<tr>
+<td class="pageheader" valign="top">Melody Log Analysis</td>
+<td align="right" rowspan="4">
+<table border="0" cellspacing="1" cellpadding="2">
+<tr class="bg0">
+<th class="tableheader" width="0%">Score</th>
+<th class="tableheader" width="0%">Meaning</th>
+</tr>
+<tr class="bg1" style="color: #FC0000;background-color: #555555;">
+<td align="left" valign="top">
+101
+</td>
+<td align="left" valign="top">
+Very rare
+</td>
+</tr>
+<tr class="bg0" style="color: #FF9900;background-color: #555555;">
+<td align="left" valign="top">
+95-100
+</td>
+<td align="left" valign="top">
+Quite rare, or<br>
+appears much more than usual
+</td>
+</tr>
+<tr class="bg1" style="color: #EEEE00;background-color: #555555;">
+<td align="left" valign="top">
+80-94
+</td>
+<td align="left" valign="top">
+Appears more than usual
+</td>
+</tr>
+<tr class="bg0" style="color: #00FC00;background-color: #555555;">
+<td align="left" valign="top">
+0-79
+</td>
+<td align="left" valign="top">
+Appears as normally expected
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<a class="title" href="#" onclick="calFromDate.select(document.forms[0].dateFrom,
+'anchorFromDate', 'MM/dd/yyyy'); return false;" title="Select the date of the earliest event to show" name="anchorFromDate" id="anchorFromDate">From: </a>
+<input name="dateFrom" value="" size="8" type="text" readonly>
+
+<a class="title" href="#" onclick="calFromDate.select(document.forms[0].dateFrom,
+'anchorFromDate', 'MM/dd/yyyy'); return false;" title="Select the date of the earliest event to show">
+<img src="cal1.jpg" onclick="calFromDate.select(document.forms[0].dateFrom, 'anchorFromDate', 'MM/dd/yyyy'); return false;" style="border-style: none"/>
+</a>
+
+&nbsp;&nbsp;&nbsp;
+<a class="title" href="#"
+onclick="calToDate.select(document.forms[0].dateTo,'anchorToDate','MM/dd/yyyy');return false;" title="Select the date of the latest event to show" name="anchorToDate" id="anchorToDate">To: </a>
+<input name="dateTo" value="" size="8" type="text" readonly>
+<a href="#"
+onclick="calToDate.select(document.forms[0].dateTo,'anchorToDate','MM/dd/yyyy');return false;" title="Select the date of the latest event to show">
+<img src="cal1.jpg" onclick="calToDate.select(document.forms[0].dateTo,'anchorToDate','MM/dd/yyyy');return false;" style="border-style: none"/>
+</a>
+
+&nbsp;&nbsp;&nbsp;
+<a class="title" href="#" onclick="resetTimeLimits(); return false;"
+title="Reset the earliest and latest events to show"><img src="reset.gif"  style="border-style: none"/></a>
+
+</td>
+</tr>
+<tr>
+<td>
+<p style="color: white" id="daysPerBar"></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="color: white">Bar height is proportional to score</p>
+<p style="color: white">Grey areas represent periods with no log data</p>
+</td>
+</tr>
+</table>
+
+<DIV ID="divFromDate"
+STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;z-index:100;"></DIV>
+
+<DIV ID="divToDate"
+STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;z-index:100"></DIV>
+
+</form>
+<!-- TITLE AND SCORE LEGEND ENDS HERE -->

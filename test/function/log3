@@ -1,0 +1,1628 @@
+class name: USB Devices
+		 USBDeviceID = 16402
+		 VendorID = 1203
+		 Speed = High-speed USB 2.0-compliant device
+		 Description = Mass Storage Function
+		 Manufacturer = Avocent
+class name: USB Devices
+		 USBDeviceID = 16402
+		 VendorID = 1203
+		 Speed = High-speed USB 2.0-compliant device
+		 Description = Mass Storage Function
+		 Manufacturer = Avocent
+class name: USB Devices
+		 USBDeviceID = 16400
+		 VendorID = 1203
+		 Speed = High-speed USB 2.0-compliant device
+		 Description = RNDIS/Ethernet Gadget
+		 Manufacturer = IBM
+class name: System Devices
+		 Target ID = 0
+		 Bus = 0
+		 Device Type = Direct Access Device
+		 Serial Number = 20120124
+		 Product Name = 12              
+		 Host Adapter ID = 0
+		 Manufacturer = IMM     
+		 Lun = 0
+		 Revision = 0325
+class name: System Devices
+		 Target ID = 0
+		 Bus = 0
+		 Device Type = Direct Access Device
+		 Serial Number = 20120124-2
+		 Product Name = Virtual Media   
+		 Host Adapter ID = 0
+		 Manufacturer = IMM     
+		 Lun = 0
+		 Revision = 0325
+class name: System Devices
+		 Target ID = 0
+		 Bus = 0
+		 Device Type = CD-ROM Device
+		 Serial Number = 
+		 Product Name = DVDRAM GT30N    
+		 Host Adapter ID = 0
+		 Manufacturer = HL-DT-ST
+		 Lun = 0
+		 Revision = IS09
+class name: System Devices
+		 Target ID = 0
+		 Bus = 1
+		 Device Type = Direct Access Device
+		 Serial Number = 00be719e19ad0100ff9009c043600705
+		 Product Name = ServeRAID M5110e
+		 Host Adapter ID = 1
+		 Manufacturer = IBM     
+		 Lun = 0
+		 Revision = 3.15
+class name: System Devices
+		 Target ID = 64
+		 Bus = 1
+		 Device Type = 
+		 Serial Number = 
+		 Product Name = DummyDevice
+		 Host Adapter ID = 1
+		 Manufacturer = RAID
+		 Lun = 0
+		 Revision = 0001
+class name: Other Devices
+		 Description = CD-ROM Drive
+		 Device Name = HL-DT-ST DVDRAM GT30N
+		 Class = CDROM
+		 Vendor Info = (Standard CD-ROM drives)
+class name: Other Devices
+		 Description = ACPI x64-based PC
+		 Device Name = ACPI x64-based PC
+		 Class = Computer
+		 Vendor Info = (Standard computers)
+class name: Other Devices
+		 Description = Disk drive
+		 Device Name = IBM ServeRAID M5110e SCSI Disk Device
+		 Class = DiskDrive
+		 Vendor Info = (Standard disk drives)
+class name: Other Devices
+		 Description = Disk drive
+		 Device Name = IMM 12 USB Device
+		 Class = DiskDrive
+		 Vendor Info = (Standard disk drives)
+class name: Other Devices
+		 Description = Disk drive
+		 Device Name = IMM Virtual Media USB Device
+		 Class = DiskDrive
+		 Vendor Info = (Standard disk drives)
+class name: Other Devices
+		 Description = Microsoft Basic Display Adapter
+		 Device Name = Microsoft Basic Display Adapter
+		 Class = Display
+		 Vendor Info = (Standard display types)
+class name: Other Devices
+		 Description = Standard SATA AHCI Controller
+		 Device Name = Standard SATA AHCI Controller
+		 Class = hdc
+		 Vendor Info = Standard SATA AHCI Controller
+class name: Other Devices
+		 Description = Remote Desktop Keyboard Device
+		 Device Name = Remote Desktop Keyboard Device
+		 Class = Keyboard
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = Generic Non-PnP Monitor
+		 Device Name = Generic Non-PnP Monitor
+		 Class = Monitor
+		 Vendor Info = (Standard monitor types)
+class name: Other Devices
+		 Description = Remote Desktop Mouse Device
+		 Device Name = Remote Desktop Mouse Device
+		 Class = Mouse
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = WAN Miniport (IPv6)
+		 Device Name = WAN Miniport (IPv6)
+		 Class = Net
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = Microsoft ISATAP Adapter
+		 Device Name = Microsoft ISATAP Adapter #2
+		 Class = Net
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = Microsoft ISATAP Adapter
+		 Device Name = Microsoft ISATAP Adapter
+		 Class = Net
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description =  NIC/TOE
+		 Device Name = Emulex OneConnect OCl11104-F2-X, NIC/TOE
+		 Class = Net
+		 Vendor Info = Emulex
+class name: Other Devices
+		 Description =  NIC/TOE
+		 Device Name = Emulex OneConnect OCl11104-F2-X, NIC/TOE #2
+		 Class = Net
+		 Vendor Info = Emulex
+class name: Other Devices
+		 Description =  NIC/TOE
+		 Device Name = Emulex OneConnect OCl11104-F2-X, NIC/TOE #3
+		 Class = Net
+		 Vendor Info = Emulex
+class name: Other Devices
+		 Description =  NIC/TOE
+		 Device Name = Emulex OneConnect OCl11104-F2-X, NIC/TOE #4
+		 Class = Net
+		 Vendor Info = Emulex
+class name: Other Devices
+		 Description = Microsoft Kernel Debug Network Adapter
+		 Device Name = Microsoft Kernel Debug Network Adapter
+		 Class = Net
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = WAN Miniport (IKEv2)
+		 Device Name = WAN Miniport (IKEv2)
+		 Class = Net
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = WAN Miniport (L2TP)
+		 Device Name = WAN Miniport (L2TP)
+		 Class = Net
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = WAN Miniport (Network Monitor)
+		 Device Name = WAN Miniport (Network Monitor)
+		 Class = Net
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = WAN Miniport (IP)
+		 Device Name = WAN Miniport (IP)
+		 Class = Net
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = WAN Miniport (PPPOE)
+		 Device Name = WAN Miniport (PPPOE)
+		 Class = Net
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = WAN Miniport (PPTP)
+		 Device Name = WAN Miniport (PPTP)
+		 Class = Net
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = WAN Miniport (SSTP)
+		 Device Name = WAN Miniport (SSTP)
+		 Class = Net
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = IBM USB Remote NDIS Network Device
+		 Device Name = IBM USB Remote NDIS Network Device
+		 Class = Net
+		 Vendor Info = IBM Corporation
+class name: Other Devices
+		 Description = Communications Port
+		 Device Name = Communications Port (COM1)
+		 Class = Ports
+		 Vendor Info = (Standard port types)
+class name: Other Devices
+		 Description = Communications Port
+		 Device Name = Communications Port (COM2)
+		 Class = Ports
+		 Vendor Info = (Standard port types)
+class name: Other Devices
+		 Description = Local Print Queue
+		 Device Name = Root Print Queue
+		 Class = PrintQueue
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = Local Print Queue
+		 Device Name = Microsoft XPS Document Writer
+		 Class = PrintQueue
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel Processor
+		 Device Name = Genuine Intel(R) CPU  @ 2.40GHz
+		 Class = Processor
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = LSI MegaRAID SAS Adapter
+		 Device Name = LSI MegaRAID SAS Adapter
+		 Class = SCSIAdapter
+		 Vendor Info = LSI Corporation
+class name: Other Devices
+		 Description = Microsoft Storage Spaces Controller
+		 Device Name = Microsoft Storage Spaces Controller
+		 Class = SCSIAdapter
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = Trusted Platform Module 1.2
+		 Device Name = Trusted Platform Module 1.2
+		 Class = SecurityDevices
+		 Vendor Info = (Standard)
+class name: Other Devices
+		 Description = PCI Express standard Downstream Switch Port
+		 Device Name = PCI Express standard Downstream Switch Port
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = Intel(R) C600/X79 series chipset PCI Express Root Port 1 - 1D10
+		 Device Name = Intel(R) C600/X79 series chipset PCI Express Root Port 1 - 1D10
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) C600/X79 series chipset SMBus Host Controller - 1D22
+		 Device Name = Intel(R) C600/X79 series chipset SMBus Host Controller - 1D22
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) C600/X79 series chipset PCI Express Virtual Root Port - 1D3E
+		 Device Name = Intel(R) C600/X79 series chipset PCI Express Virtual Root Port - 1D3E
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) C600/X79 series chipset LPC Controller - 1D41
+		 Device Name = Intel(R) C600/X79 series chipset LPC Controller - 1D41
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) 82801 PCI Bridge - 244E
+		 Device Name = Intel(R) 82801 PCI Bridge - 244E
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMI2 - 3C00
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMI2 - 3C00
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMI2 in PCI Express Mode - 3C01
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMI2 in PCI Express Mode - 3C01
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 1a - 3C02
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 1a - 3C02
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 1a - 3C02
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 1a - 3C02
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 2a - 3C04
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 2a - 3C04
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 2a - 3C04
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 2a - 3C04
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 2c - 3C06
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 2c - 3C06
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 2c - 3C06
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 2c - 3C06
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 3a in PCI Express Mode - 3C08
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 3a in PCI Express Mode - 3C08
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 3a in PCI Express Mode - 3C08
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 3a in PCI Express Mode - 3C08
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 3c - 3C0A
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 3c - 3C0A
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 3c - 3C0A
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 IIO PCI Express Root Port 3c - 3C0A
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 0 - 3C20
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 0 - 3C20
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 0 - 3C20
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 0 - 3C20
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 1 - 3C21
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 1 - 3C21
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 1 - 3C21
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 1 - 3C21
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 2 - 3C22
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 2 - 3C22
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 2 - 3C22
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 2 - 3C22
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 3 - 3C23
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 3 - 3C23
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 3 - 3C23
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 3 - 3C23
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 4 - 3C24
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 4 - 3C24
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 4 - 3C24
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 4 - 3C24
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 5 - 3C25
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 5 - 3C25
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 5 - 3C25
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 5 - 3C25
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 6 - 3C26
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 6 - 3C26
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 6 - 3C26
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 6 - 3C26
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 7 - 3C27
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 7 - 3C27
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 7 - 3C27
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 DMA Channel 7 - 3C27
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description =  System Management - 3C28
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 Address Map, VTd_Misc, System Management - 3C28
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description =  System Management - 3C28
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 Address Map, VTd_Misc, System Management - 3C28
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 Control Status and Global Errors - 3C2A
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 Control Status and Global Errors - 3C2A
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 Control Status and Global Errors - 3C2A
+		 Device Name = Intel(R) Xeon(R) Processor E5 Product Family/Core i7 Control Status and Global Errors - 3C2A
+		 Class = System
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = ACPI Fixed Feature Button
+		 Device Name = ACPI Fixed Feature Button
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = Microsoft Basic Display Driver
+		 Device Name = Microsoft Basic Display Driver
+		 Class = System
+		 Vendor Info = (Standard display types)
+class name: Other Devices
+		 Description = Microsoft Basic Render Driver
+		 Device Name = Microsoft Basic Render Driver
+		 Class = System
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = Composite Bus Enumerator
+		 Device Name = Composite Bus Enumerator
+		 Class = System
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = Microsoft Generic IPMI Compliant Device
+		 Device Name = Microsoft Generic IPMI Compliant Device
+		 Class = System
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = Microsoft System Management BIOS Driver
+		 Device Name = Microsoft System Management BIOS Driver
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = Programmable interrupt controller
+		 Device Name = Programmable interrupt controller
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = Advanced programmable interrupt controller
+		 Device Name = Advanced programmable interrupt controller
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = System timer
+		 Device Name = System timer
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = High precision event timer
+		 Device Name = High precision event timer
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = Direct memory access controller
+		 Device Name = Direct memory access controller
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = System speaker
+		 Device Name = System speaker
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = PCI Express Root Complex
+		 Device Name = PCI Express Root Complex
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = PCI Express Root Complex
+		 Device Name = PCI Express Root Complex
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = Remote Desktop Device Redirector Bus
+		 Device Name = Remote Desktop Device Redirector Bus
+		 Class = System
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = System CMOS/real time clock
+		 Device Name = System CMOS/real time clock
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = Plug and Play Software Device Enumerator
+		 Device Name = Plug and Play Software Device Enumerator
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = UMBus Root Bus Enumerator
+		 Device Name = UMBus Root Bus Enumerator
+		 Class = System
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = Microsoft Virtual Drive Enumerator
+		 Device Name = Microsoft Virtual Drive Enumerator
+		 Class = System
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = Volume Manager
+		 Device Name = Volume Manager
+		 Class = System
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = Motherboard resources
+		 Device Name = Motherboard resources
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = Motherboard resources
+		 Device Name = Motherboard resources
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = LSI MegaRAID Virtual Device
+		 Device Name = LSI MegaRAID Virtual Device
+		 Class = System
+		 Vendor Info = LSI Corp.
+class name: Other Devices
+		 Description = Motherboard resources
+		 Device Name = Motherboard resources
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = Numeric data processor
+		 Device Name = Numeric data processor
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = Microsoft Hardware Error Device
+		 Device Name = Microsoft Hardware Error Device
+		 Class = System
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = Microsoft ACPI-Compliant System
+		 Device Name = Microsoft ACPI-Compliant System
+		 Class = System
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = UMBus Enumerator
+		 Device Name = UMBus Enumerator
+		 Class = System
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = PCI standard PCI Express to PCI/PCI-X Bridge
+		 Device Name = PCI standard PCI Express to PCI/PCI-X Bridge
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = PCI Express standard Upstream Switch Port
+		 Device Name = PCI Express standard Upstream Switch Port
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = PCI Express standard Downstream Switch Port
+		 Device Name = PCI Express standard Downstream Switch Port
+		 Class = System
+		 Vendor Info = (Standard system devices)
+class name: Other Devices
+		 Description = Intel(R) C600/X79 series chipset USB2 Enhanced Host Controller #2 - 1D2D
+		 Device Name = Intel(R) C600/X79 series chipset USB2 Enhanced Host Controller #2 - 1D2D
+		 Class = USB
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = Generic USB Hub
+		 Device Name = Generic USB Hub
+		 Class = USB
+		 Vendor Info = (Generic USB Hub)
+class name: Other Devices
+		 Description = USB Root Hub
+		 Device Name = USB Root Hub
+		 Class = USB
+		 Vendor Info = (Standard USB Host Controller)
+class name: Other Devices
+		 Description = USB Root Hub
+		 Device Name = USB Root Hub
+		 Class = USB
+		 Vendor Info = (Standard USB Host Controller)
+class name: Other Devices
+		 Description = Intel(R) C600/X79 series chipset USB2 Enhanced Host Controller #1 - 1D26
+		 Device Name = Intel(R) C600/X79 series chipset USB2 Enhanced Host Controller #1 - 1D26
+		 Class = USB
+		 Vendor Info = Intel
+class name: Other Devices
+		 Description = USB Mass Storage Device
+		 Device Name = USB Mass Storage Device
+		 Class = USB
+		 Vendor Info = Compatible USB storage device
+class name: Other Devices
+		 Description = USB Mass Storage Device
+		 Device Name = USB Mass Storage Device
+		 Class = USB
+		 Vendor Info = Compatible USB storage device
+class name: Other Devices
+		 Description = Generic USB Hub
+		 Device Name = Generic USB Hub
+		 Class = USB
+		 Vendor Info = (Generic USB Hub)
+class name: Other Devices
+		 Description = Generic USB Hub
+		 Device Name = Generic USB Hub
+		 Class = USB
+		 Vendor Info = (Generic USB Hub)
+class name: Other Devices
+		 Description = Generic volume
+		 Device Name = Generic volume
+		 Class = Volume
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = Generic volume
+		 Device Name = Generic volume
+		 Class = Volume
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = Generic volume
+		 Device Name = Generic volume
+		 Class = Volume
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = Generic volume
+		 Device Name = Generic volume
+		 Class = Volume
+		 Vendor Info = Microsoft
+class name: Other Devices
+		 Description = Generic volume
+		 Device Name = Generic volume
+		 Class = Volume
+		 Vendor Info = Microsoft
+class name: Optical Device Capabilities
+		 CD-RW Write = Yes
+		 DVD-R Read = Yes
+		 DVD-RAM Write = Yes
+		 CD-RW Read = Yes
+		 CD-R Write = Yes
+		 Product Name = DVDRAM GT30N    
+		 CD-R Read = Yes
+		 DVD-R Write = Yes
+		 DVD-RAM Read = Yes
+		 DVD-ROM Read = Yes
+		 Manufacturer = HL-DT-ST
+class name: USB Hub
+		 NumberOfPorts = 6
+		 Description = \\.\USB#VID_8087&amp;PID_0024#5&amp;e8b7255&amp;0&amp;1#{f18a0e88-c30c-11d0-8815-00a0c906bed8}
+class name: USB Hub
+		 NumberOfPorts = 8
+		 Description = \\.\USB#VID_8087&amp;PID_0024#5&amp;2843b61d&amp;0&amp;1#{f18a0e88-c30c-11d0-8815-00a0c906bed8}
+class name: USB Hub
+		 NumberOfPorts = 6
+		 Description = Gadget USB HUB
+class name: USB Hub
+		 NumberOfPorts = 8
+		 Description = Intel(R) C600/X79 series chipset USB2 Enhanced Host Controller #1 - 1D26
+class name: USB Hub
+		 NumberOfPorts = 6
+		 Description = Intel(R) C600/X79 series chipset USB2 Enhanced Host Controller #2 - 1D2D
+class name: Disk Information
+		 Status = On-line
+		 Size = 271.4 GB
+		 Type = Basic
+		 Name = Disk 0
+		 Number Of Partitions = 3
+class name: Disk Information
+		 PartitionSubType = Unknown
+		 Fault Tolerant = false
+		 Format = 
+		 Partition = Disk 0,Partition 1
+		 Offset = 1024 KB
+		 Type = GPT: EFI System Partition
+		 Size = 200 MB
+class name: Disk Information
+		 PartitionSubType = Unknown
+		 Fault Tolerant = false
+		 Format = 
+		 Partition = Disk 0,Partition 2
+		 Offset = 205824 KB
+		 Type = GPT: Microsoft Reserved Partition
+		 Size = 128 MB
+class name: Disk Information
+		 PartitionSubType = Unknown
+		 Fault Tolerant = false
+		 Format = NTFS
+		 Partition = Disk 0,Partition 3
+		 Offset = 336896 KB
+		 Type = GPT: Basic Data Partition
+		 Size = 271.1 GB
+class name: Disk Information
+		 Status = On-line
+		 Size = 1.4 MB
+		 Type = Basic
+		 Name = Disk 1
+		 Number Of Partitions = 1
+class name: Disk Information
+		 PartitionSubType = Microsoft 16-bit FAT
+		 Fault Tolerant = false
+		 Format = FAT
+		 Partition = Disk 1,Partition 1
+		 Offset = 64 KB
+		 Type = Primary
+		 Size = 1.3 MB
+class name: Disk Information
+		 Status = 
+		 Size = 
+		 Type = 
+		 Name = DVD-ROM 0
+		 Number Of Partitions = 1
+class name: System Card Information
+		 Serial Number = 1CH019
+		 Version = 
+		 Type = Mother Board
+		 Name = 95Y2154
+		 Manufacturer = IBM
+class name: System Card Information
+		 Serial Number = (none)
+		 Version = (none)
+		 Type = Daughter Card
+		 Name = DASD
+		 Manufacturer = IBM
+class name: System Card Information
+		 Serial Number = (none)
+		 Version = (none)
+		 Type = Processor/Memory Module
+		 Name = Processor/Memory Card
+		 Manufacturer = IBM
+class name: Memory
+		 MemoryTypeA = DIMM 4/Node 1 Bank 4
+		 Capacity = DIMM 3/Node 1 Bank 3
+		 BankLabel = DIMM 2/Node 1 Bank 2
+		 SerialNumber = Node 1 Bank 1
+		 Max Speed (Mhz) = DIMM 5/Node 1 Bank 5
+		 Tag = DIMM 1/Node 1 Bank 1
+		 ErrorCorrectionType = DIMM 6/Node 1 Bank 6
+		 PartNumber = DIMM 8/Node 1 Bank 8
+		 Manufacturer = DIMM 7/Node 1 Bank 7
+class name: Memory
+		 MemoryTypeA = Node 1 Bank 5
+		 Capacity = Node 1 Bank 4
+		 BankLabel = Node 1 Bank 3
+		 SerialNumber = 0 Bytes
+		 Max Speed (Mhz) = Node 1 Bank 6
+		 Tag = Node 1 Bank 2
+		 ErrorCorrectionType = Node 1 Bank 7
+		 PartNumber = 4 Gigabytes
+		 Manufacturer = Node 1 Bank 8
+class name: Memory
+		 MemoryTypeA = 0 Bytes
+		 Capacity = 0 Bytes
+		 BankLabel = 0 Bytes
+		 SerialNumber = Unpopulated
+		 Max Speed (Mhz) = 0 Bytes
+		 Tag = 0 Bytes
+		 ErrorCorrectionType = 0 Bytes
+		 PartNumber = Unpopulated
+		 Manufacturer = DDR3
+class name: Memory
+		 MemoryTypeA = Unpopulated
+		 Capacity = Unpopulated
+		 BankLabel = Unpopulated
+		 SerialNumber =  
+		 Max Speed (Mhz) = Unpopulated
+		 Tag = Unpopulated
+		 ErrorCorrectionType = 1333
+		 PartNumber =  
+		 Manufacturer =  
+class name: Memory
+		 MemoryTypeA =  
+		 Capacity =  
+		 BankLabel =  
+		 SerialNumber =  
+		 Max Speed (Mhz) = Single-bit ECC
+		 Tag =  
+		 ErrorCorrectionType =  
+		 PartNumber =  
+		 Manufacturer =  
+class name: Memory
+		 MemoryTypeA = Samsung
+		 Capacity =  
+		 BankLabel =  
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag =  
+		 ErrorCorrectionType = 
+		 PartNumber = 
+		 Manufacturer = 
+class name: Memory
+		 MemoryTypeA = 
+		 Capacity = M393B5270DH0-YH9  
+		 BankLabel = 
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag = 
+		 ErrorCorrectionType = 
+		 PartNumber = 
+		 Manufacturer = 
+class name: Memory
+		 MemoryTypeA = 
+		 Capacity = 
+		 BankLabel = 213E730B
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag = 
+		 ErrorCorrectionType = 
+		 PartNumber = 
+		 Manufacturer = 
+class name: Memory
+		 MemoryTypeA = DIMM 12/Node 1 Bank 12
+		 Capacity = DIMM 11/Node 1 Bank 11
+		 BankLabel = DIMM 10/Node 1 Bank 10
+		 SerialNumber = Node 1 Bank 9
+		 Max Speed (Mhz) = DIMM 13/Node 1 Bank 13
+		 Tag = DIMM 9/Node 1 Bank 9
+		 ErrorCorrectionType = DIMM 14/Node 1 Bank 14
+		 PartNumber = DIMM 16/Node 1 Bank 16
+		 Manufacturer = DIMM 15/Node 1 Bank 15
+class name: Memory
+		 MemoryTypeA = Node 1 Bank 13
+		 Capacity = Node 1 Bank 12
+		 BankLabel = Node 1 Bank 11
+		 SerialNumber = 0 Bytes
+		 Max Speed (Mhz) = Node 1 Bank 14
+		 Tag = Node 1 Bank 10
+		 ErrorCorrectionType = Node 1 Bank 15
+		 PartNumber = 0 Bytes
+		 Manufacturer = Node 1 Bank 16
+class name: Memory
+		 MemoryTypeA = 0 Bytes
+		 Capacity = 4 Gigabytes
+		 BankLabel = 0 Bytes
+		 SerialNumber = Unpopulated
+		 Max Speed (Mhz) = 0 Bytes
+		 Tag = 0 Bytes
+		 ErrorCorrectionType = 0 Bytes
+		 PartNumber = Unpopulated
+		 Manufacturer = Unpopulated
+class name: Memory
+		 MemoryTypeA = Unpopulated
+		 Capacity = Unpopulated
+		 BankLabel = DDR3
+		 SerialNumber =  
+		 Max Speed (Mhz) = Unpopulated
+		 Tag = Unpopulated
+		 ErrorCorrectionType =  
+		 PartNumber =  
+		 Manufacturer =  
+class name: Memory
+		 MemoryTypeA =  
+		 Capacity =  
+		 BankLabel =  
+		 SerialNumber = Single-bit ECC
+		 Max Speed (Mhz) =  
+		 Tag = 1333
+		 ErrorCorrectionType =  
+		 PartNumber =  
+		 Manufacturer =  
+class name: Memory
+		 MemoryTypeA = 
+		 Capacity =  
+		 BankLabel =  
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag =  
+		 ErrorCorrectionType = 
+		 PartNumber = Samsung
+		 Manufacturer = 
+class name: Memory
+		 MemoryTypeA = 
+		 Capacity = 
+		 BankLabel = 
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag = 
+		 ErrorCorrectionType = 
+		 PartNumber = 
+		 Manufacturer = M393B5270DH0-YH9  
+class name: Memory
+		 MemoryTypeA = 
+		 Capacity = 
+		 BankLabel = 
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag = 
+		 ErrorCorrectionType = 213E7133
+		 PartNumber = 
+		 Manufacturer = 
+class name: Memory
+		 MemoryTypeA = DIMM 20/Node 1 Bank 20
+		 Capacity = DIMM 19/Node 1 Bank 19
+		 BankLabel = DIMM 18/Node 1 Bank 18
+		 SerialNumber = Node 1 Bank 17
+		 Max Speed (Mhz) = DIMM 21/Node 1 Bank 21
+		 Tag = DIMM 17/Node 1 Bank 17
+		 ErrorCorrectionType = DIMM 22/Node 1 Bank 22
+		 PartNumber = DIMM 24/Node 1 Bank 24
+		 Manufacturer = DIMM 23/Node 1 Bank 23
+class name: Memory
+		 MemoryTypeA = Node 1 Bank 21
+		 Capacity = Node 1 Bank 20
+		 BankLabel = Node 1 Bank 19
+		 SerialNumber = 0 Bytes
+		 Max Speed (Mhz) = Node 1 Bank 22
+		 Tag = Node 1 Bank 18
+		 ErrorCorrectionType = Node 1 Bank 23
+		 PartNumber = 0 Bytes
+		 Manufacturer = Node 1 Bank 24
+class name: Memory
+		 MemoryTypeA = 0 Bytes
+		 Capacity = 0 Bytes
+		 BankLabel = 0 Bytes
+		 SerialNumber = Unpopulated
+		 Max Speed (Mhz) = 0 Bytes
+		 Tag = 0 Bytes
+		 ErrorCorrectionType = 0 Bytes
+		 PartNumber = Unpopulated
+		 Manufacturer = Unpopulated
+class name: Memory
+		 MemoryTypeA = Unpopulated
+		 Capacity = Unpopulated
+		 BankLabel = Unpopulated
+		 SerialNumber =  
+		 Max Speed (Mhz) = Unpopulated
+		 Tag = Unpopulated
+		 ErrorCorrectionType =  
+		 PartNumber =  
+		 Manufacturer =  
+class name: Memory
+		 MemoryTypeA =  
+		 Capacity =  
+		 BankLabel =  
+		 SerialNumber =  
+		 Max Speed (Mhz) =  
+		 Tag =  
+		 ErrorCorrectionType =  
+		 PartNumber =  
+		 Manufacturer =  
+class name: Memory
+		 MemoryTypeA = 
+		 Capacity =  
+		 BankLabel =  
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag =  
+		 ErrorCorrectionType = 
+		 PartNumber = 
+		 Manufacturer = 
+class name: Memory
+		 MemoryTypeA = 
+		 Capacity = 
+		 BankLabel = 
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag = 
+		 ErrorCorrectionType = 
+		 PartNumber = 
+		 Manufacturer = 
+class name: Memory
+		 MemoryTypeA = 
+		 Capacity = 
+		 BankLabel = 
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag = 
+		 ErrorCorrectionType = 
+		 PartNumber = 
+		 Manufacturer = 
+class name: Memory
+		 MemoryTypeA = DIMM 28/Node 1 Bank 28
+		 Capacity = DIMM 27/Node 1 Bank 27
+		 BankLabel = DIMM 26/Node 1 Bank 26
+		 SerialNumber = Node 1 Bank 25
+		 Max Speed (Mhz) = DIMM 29/Node 1 Bank 29
+		 Tag = DIMM 25/Node 1 Bank 25
+		 ErrorCorrectionType = DIMM 30/Node 1 Bank 30
+		 PartNumber = DIMM 32/Node 1 Bank 32
+		 Manufacturer = DIMM 31/Node 1 Bank 31
+class name: Memory
+		 MemoryTypeA = Node 1 Bank 29
+		 Capacity = Node 1 Bank 28
+		 BankLabel = Node 1 Bank 27
+		 SerialNumber = 0 Bytes
+		 Max Speed (Mhz) = Node 1 Bank 30
+		 Tag = Node 1 Bank 26
+		 ErrorCorrectionType = Node 1 Bank 31
+		 PartNumber = 0 Bytes
+		 Manufacturer = Node 1 Bank 32
+class name: Memory
+		 MemoryTypeA = 0 Bytes
+		 Capacity = 0 Bytes
+		 BankLabel = 0 Bytes
+		 SerialNumber = Unpopulated
+		 Max Speed (Mhz) = 0 Bytes
+		 Tag = 0 Bytes
+		 ErrorCorrectionType = 0 Bytes
+		 PartNumber = Unpopulated
+		 Manufacturer = Unpopulated
+class name: Memory
+		 MemoryTypeA = Unpopulated
+		 Capacity = Unpopulated
+		 BankLabel = Unpopulated
+		 SerialNumber =  
+		 Max Speed (Mhz) = Unpopulated
+		 Tag = Unpopulated
+		 ErrorCorrectionType =  
+		 PartNumber =  
+		 Manufacturer =  
+class name: Memory
+		 MemoryTypeA =  
+		 Capacity =  
+		 BankLabel =  
+		 SerialNumber =  
+		 Max Speed (Mhz) =  
+		 Tag =  
+		 ErrorCorrectionType =  
+		 PartNumber =  
+		 Manufacturer =  
+class name: Memory
+		 MemoryTypeA = 
+		 Capacity =  
+		 BankLabel =  
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag =  
+		 ErrorCorrectionType = 
+		 PartNumber = 
+		 Manufacturer = 
+class name: Memory
+		 MemoryTypeA = 
+		 Capacity = 
+		 BankLabel = 
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag = 
+		 ErrorCorrectionType = 
+		 PartNumber = 
+		 Manufacturer = 
+class name: Memory
+		 MemoryTypeA = 
+		 Capacity = 
+		 BankLabel = 
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag = 
+		 ErrorCorrectionType = 
+		 PartNumber = 
+		 Manufacturer = 
+class name: Memory
+		 MemoryTypeA = DIMM 36/Node 1 Bank 36
+		 Capacity = DIMM 35/Node 1 Bank 35
+		 BankLabel = DIMM 34/Node 1 Bank 34
+		 SerialNumber = Node 1 Bank 33
+		 Max Speed (Mhz) = DIMM 37/Node 1 Bank 37
+		 Tag = DIMM 33/Node 1 Bank 33
+		 ErrorCorrectionType = DIMM 38/Node 1 Bank 38
+		 PartNumber = DIMM 40/Node 1 Bank 40
+		 Manufacturer = DIMM 39/Node 1 Bank 39
+class name: Memory
+		 MemoryTypeA = Node 1 Bank 37
+		 Capacity = Node 1 Bank 36
+		 BankLabel = Node 1 Bank 35
+		 SerialNumber = 0 Bytes
+		 Max Speed (Mhz) = Node 1 Bank 38
+		 Tag = Node 1 Bank 34
+		 ErrorCorrectionType = Node 1 Bank 39
+		 PartNumber = 0 Bytes
+		 Manufacturer = Node 1 Bank 40
+class name: Memory
+		 MemoryTypeA = 0 Bytes
+		 Capacity = 0 Bytes
+		 BankLabel = 0 Bytes
+		 SerialNumber = Unpopulated
+		 Max Speed (Mhz) = 0 Bytes
+		 Tag = 0 Bytes
+		 ErrorCorrectionType = 0 Bytes
+		 PartNumber = Unpopulated
+		 Manufacturer = Unpopulated
+class name: Memory
+		 MemoryTypeA = Unpopulated
+		 Capacity = Unpopulated
+		 BankLabel = Unpopulated
+		 SerialNumber =  
+		 Max Speed (Mhz) = Unpopulated
+		 Tag = Unpopulated
+		 ErrorCorrectionType =  
+		 PartNumber =  
+		 Manufacturer =  
+class name: Memory
+		 MemoryTypeA =  
+		 Capacity =  
+		 BankLabel =  
+		 SerialNumber =  
+		 Max Speed (Mhz) =  
+		 Tag =  
+		 ErrorCorrectionType =  
+		 PartNumber =  
+		 Manufacturer =  
+class name: Memory
+		 MemoryTypeA = 
+		 Capacity =  
+		 BankLabel =  
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag =  
+		 ErrorCorrectionType = 
+		 PartNumber = 
+		 Manufacturer = 
+class name: Memory
+		 MemoryTypeA = 
+		 Capacity = 
+		 BankLabel = 
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag = 
+		 ErrorCorrectionType = 
+		 PartNumber = 
+		 Manufacturer = 
+class name: Memory
+		 MemoryTypeA = 
+		 Capacity = 
+		 BankLabel = 
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag = 
+		 ErrorCorrectionType = 
+		 PartNumber = 
+		 Manufacturer = 
+class name: Memory
+		 MemoryTypeA = DIMM 44/Node 1 Bank 44
+		 Capacity = DIMM 43/Node 1 Bank 43
+		 BankLabel = DIMM 42/Node 1 Bank 42
+		 SerialNumber = Node 1 Bank 41
+		 Max Speed (Mhz) = DIMM 45/Node 1 Bank 45
+		 Tag = DIMM 41/Node 1 Bank 41
+		 ErrorCorrectionType = DIMM 46/Node 1 Bank 46
+		 PartNumber = DIMM 48/Node 1 Bank 48
+		 Manufacturer = DIMM 47/Node 1 Bank 47
+class name: Memory
+		 MemoryTypeA = Node 1 Bank 45
+		 Capacity = Node 1 Bank 44
+		 BankLabel = Node 1 Bank 43
+		 SerialNumber = 0 Bytes
+		 Max Speed (Mhz) = Node 1 Bank 46
+		 Tag = Node 1 Bank 42
+		 ErrorCorrectionType = Node 1 Bank 47
+		 PartNumber = 0 Bytes
+		 Manufacturer = Node 1 Bank 48
+class name: Memory
+		 MemoryTypeA = 0 Bytes
+		 Capacity = 0 Bytes
+		 BankLabel = 0 Bytes
+		 SerialNumber = Unpopulated
+		 Max Speed (Mhz) = 0 Bytes
+		 Tag = 0 Bytes
+		 ErrorCorrectionType = 0 Bytes
+		 PartNumber = Unpopulated
+		 Manufacturer = Unpopulated
+class name: Memory
+		 MemoryTypeA = Unpopulated
+		 Capacity = Unpopulated
+		 BankLabel = Unpopulated
+		 SerialNumber =  
+		 Max Speed (Mhz) = Unpopulated
+		 Tag = Unpopulated
+		 ErrorCorrectionType =  
+		 PartNumber =  
+		 Manufacturer =  
+class name: Memory
+		 MemoryTypeA =  
+		 Capacity =  
+		 BankLabel =  
+		 SerialNumber =  
+		 Max Speed (Mhz) =  
+		 Tag =  
+		 ErrorCorrectionType =  
+		 PartNumber =  
+		 Manufacturer =  
+class name: Memory
+		 MemoryTypeA = 
+		 Capacity =  
+		 BankLabel =  
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag =  
+		 ErrorCorrectionType = 
+		 PartNumber = 
+		 Manufacturer = 
+class name: Memory
+		 MemoryTypeA = 
+		 Capacity = 
+		 BankLabel = 
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag = 
+		 ErrorCorrectionType = 
+		 PartNumber = 
+		 Manufacturer = 
+class name: Memory
+		 MemoryTypeA = 
+		 Capacity = 
+		 BankLabel = 
+		 SerialNumber = 
+		 Max Speed (Mhz) = 
+		 Tag = 
+		 ErrorCorrectionType = 
+		 PartNumber = 
+		 Manufacturer = 
+class name: Processor/Core
+		 Status = Core 1
+		 Core = CPU 1
+		 Name = CPU 1
+		 Level 2 Cache Enabled (at boot time) = Intel(R) Corporation
+		 Level 3 Cache Operational Mode = Intel(R) Corporation
+		 Level 3 Cache Enabled (at boot time) = Intel(R) Corporation
+		 Version = CPU 1
+		 Hyper-threading Status = Core 3
+		 Stepping = CPU 1
+		 Level 2 Cache Operational Mode = Core 6
+		 Current Clock Speed (Mhz) = CPU 1
+		 Hyper-threading Supported = Core 2
+		 Level 1 Cache Enabled (at boot time) = Core 5
+		 Level 1 Cache Operational Mode = Core 4
+		 Manufacturer = CPU 1
+class name: Processor/Core
+		 Status = Genuine Intel(R) CPU  @ 2.40GHz
+		 Core = Intel(R) Corporation
+		 Name = Intel(R) Corporation
+		 Level 2 Cache Enabled (at boot time) = x86 Family 6, Model 13, Stepping 6 (6D6)
+		 Level 3 Cache Operational Mode = x86 Family 6, Model 13, Stepping 6 (6D6)
+		 Level 3 Cache Enabled (at boot time) = x86 Family 6, Model 13, Stepping 6 (6D6)
+		 Version = Genuine Intel(R) CPU  @ 2.40GHz
+		 Hyper-threading Status = Genuine Intel(R) CPU  @ 2.40GHz
+		 Stepping = Genuine Intel(R) CPU  @ 2.40GHz
+		 Level 2 Cache Operational Mode = x86 Family 6, Model 13, Stepping 6 (6D6)
+		 Current Clock Speed (Mhz) = Genuine Intel(R) CPU  @ 2.40GHz
+		 Hyper-threading Supported = Genuine Intel(R) CPU  @ 2.40GHz
+		 Level 1 Cache Enabled (at boot time) = x86 Family 6, Model 13, Stepping 6 (6D6)
+		 Level 1 Cache Operational Mode = x86 Family 6, Model 13, Stepping 6 (6D6)
+		 Manufacturer = Intel(R) Corporation
+class name: Processor/Core
+		 Status = CPU Enabled
+		 Core = 2400
+		 Name = 2400
+		 Level 2 Cache Enabled (at boot time) = true
+		 Level 3 Cache Operational Mode = true
+		 Level 3 Cache Enabled (at boot time) = true
+		 Version = 2400
+		 Hyper-threading Status = CPU Enabled
+		 Stepping = 2400
+		 Level 2 Cache Operational Mode = CPU Enabled
+		 Current Clock Speed (Mhz) = 2400
+		 Hyper-threading Supported = CPU Enabled
+		 Level 1 Cache Enabled (at boot time) = CPU Enabled
+		 Level 1 Cache Operational Mode = CPU Enabled
+		 Manufacturer = 2400
+class name: Processor/Core
+		 Status = Enabled
+		 Core = true
+		 Name = true
+		 Level 2 Cache Enabled (at boot time) = Write Back
+		 Level 3 Cache Operational Mode = Write Back
+		 Level 3 Cache Enabled (at boot time) = Write Back
+		 Version = Enabled
+		 Hyper-threading Status = Enabled
+		 Stepping = Enabled
+		 Level 2 Cache Operational Mode = Write Back
+		 Current Clock Speed (Mhz) = Enabled
+		 Hyper-threading Supported = Enabled
+		 Level 1 Cache Enabled (at boot time) = Write Back
+		 Level 1 Cache Operational Mode = Write Back
+		 Manufacturer = true
+class name: Processor/Core
+		 Status = Write Back
+		 Core = true
+		 Name = true
+		 Level 2 Cache Enabled (at boot time) = true
+		 Level 3 Cache Operational Mode = true
+		 Level 3 Cache Enabled (at boot time) = true
+		 Version = true
+		 Hyper-threading Status = Write Back
+		 Stepping = true
+		 Level 2 Cache Operational Mode = Write Back
+		 Current Clock Speed (Mhz) = true
+		 Hyper-threading Supported = Write Back
+		 Level 1 Cache Enabled (at boot time) = Write Back
+		 Level 1 Cache Operational Mode = Write Back
+		 Manufacturer = true
+class name: Processor/Core
+		 Status = Write Back
+		 Core = true
+		 Name = true
+		 Level 2 Cache Enabled (at boot time) = true
+		 Level 3 Cache Operational Mode = true
+		 Level 3 Cache Enabled (at boot time) = true
+		 Version = Write Back
+		 Hyper-threading Status = Write Back
+		 Stepping = Write Back
+		 Level 2 Cache Operational Mode = true
+		 Current Clock Speed (Mhz) = Write Back
+		 Hyper-threading Supported = Write Back
+		 Level 1 Cache Enabled (at boot time) = true
+		 Level 1 Cache Operational Mode = true
+		 Manufacturer = true
+class name: Processor/Core
+		 Status = Core 1
+		 Core = CPU 2
+		 Name = CPU 2
+		 Level 2 Cache Enabled (at boot time) = Intel(R) Corporation
+		 Level 3 Cache Operational Mode = Intel(R) Corporation
+		 Level 3 Cache Enabled (at boot time) = Intel(R) Corporation
+		 Version = CPU 2
+		 Hyper-threading Status = Core 3
+		 Stepping = CPU 2
+		 Level 2 Cache Operational Mode = Core 6
+		 Current Clock Speed (Mhz) = CPU 2
+		 Hyper-threading Supported = Core 2
+		 Level 1 Cache Enabled (at boot time) = Core 5
+		 Level 1 Cache Operational Mode = Core 4
+		 Manufacturer = CPU 2
+class name: Processor/Core
+		 Status = Genuine Intel(R) CPU  @ 2.40GHz
+		 Core = Intel(R) Corporation
+		 Name = Intel(R) Corporation
+		 Level 2 Cache Enabled (at boot time) = x86 Family 6, Model 13, Stepping 6 (6D6)
+		 Level 3 Cache Operational Mode = x86 Family 6, Model 13, Stepping 6 (6D6)
+		 Level 3 Cache Enabled (at boot time) = x86 Family 6, Model 13, Stepping 6 (6D6)
+		 Version = Genuine Intel(R) CPU  @ 2.40GHz
+		 Hyper-threading Status = Genuine Intel(R) CPU  @ 2.40GHz
+		 Stepping = Genuine Intel(R) CPU  @ 2.40GHz
+		 Level 2 Cache Operational Mode = x86 Family 6, Model 13, Stepping 6 (6D6)
+		 Current Clock Speed (Mhz) = Genuine Intel(R) CPU  @ 2.40GHz
+		 Hyper-threading Supported = Genuine Intel(R) CPU  @ 2.40GHz
+		 Level 1 Cache Enabled (at boot time) = x86 Family 6, Model 13, Stepping 6 (6D6)
+		 Level 1 Cache Operational Mode = x86 Family 6, Model 13, Stepping 6 (6D6)
+		 Manufacturer = Intel(R) Corporation
+class name: Processor/Core
+		 Status = CPU Enabled
+		 Core = 2400
+		 Name = 2400
+		 Level 2 Cache Enabled (at boot time) = true
+		 Level 3 Cache Operational Mode = true
+		 Level 3 Cache Enabled (at boot time) = true
+		 Version = 2400
+		 Hyper-threading Status = CPU Enabled
+		 Stepping = 2400
+		 Level 2 Cache Operational Mode = CPU Enabled
+		 Current Clock Speed (Mhz) = 2400
+		 Hyper-threading Supported = CPU Enabled
+		 Level 1 Cache Enabled (at boot time) = CPU Enabled
+		 Level 1 Cache Operational Mode = CPU Enabled
+		 Manufacturer = 2400
+class name: Processor/Core
+		 Status = Enabled
+		 Core = true
+		 Name = true
+		 Level 2 Cache Enabled (at boot time) = Write Back
+		 Level 3 Cache Operational Mode = Write Back
+		 Level 3 Cache Enabled (at boot time) = Write Back
+		 Version = Enabled
+		 Hyper-threading Status = Enabled
+		 Stepping = Enabled
+		 Level 2 Cache Operational Mode = Write Back
+		 Current Clock Speed (Mhz) = Enabled
+		 Hyper-threading Supported = Enabled
+		 Level 1 Cache Enabled (at boot time) = Write Back
+		 Level 1 Cache Operational Mode = Write Back
+		 Manufacturer = true
+class name: Processor/Core
+		 Status = Write Back
+		 Core = true
+		 Name = true
+		 Level 2 Cache Enabled (at boot time) = true
+		 Level 3 Cache Operational Mode = true
+		 Level 3 Cache Enabled (at boot time) = true
+		 Version = true
+		 Hyper-threading Status = Write Back
+		 Stepping = true
+		 Level 2 Cache Operational Mode = Write Back
+		 Current Clock Speed (Mhz) = true
+		 Hyper-threading Supported = Write Back
+		 Level 1 Cache Enabled (at boot time) = Write Back
+		 Level 1 Cache Operational Mode = Write Back
+		 Manufacturer = true
+class name: Processor/Core
+		 Status = Write Back
+		 Core = true
+		 Name = true
+		 Level 2 Cache Enabled (at boot time) = true
+		 Level 3 Cache Operational Mode = true
+		 Level 3 Cache Enabled (at boot time) = true
+		 Version = Write Back
+		 Hyper-threading Status = Write Back
+		 Stepping = Write Back
+		 Level 2 Cache Operational Mode = true
+		 Current Clock Speed (Mhz) = Write Back
+		 Hyper-threading Supported = Write Back
+		 Level 1 Cache Enabled (at boot time) = true
+		 Level 1 Cache Operational Mode = true
+		 Manufacturer = true
+class name: Processor/Core
+		 Status = 
+		 Core = CPU 4
+		 Name = CPU 3
+		 Level 2 Cache Enabled (at boot time) = Unpopulated
+		 Level 3 Cache Operational Mode = Unpopulated
+		 Level 3 Cache Enabled (at boot time) = 
+		 Version =  
+		 Hyper-threading Status = 
+		 Stepping = 
+		 Level 2 Cache Operational Mode = 
+		 Current Clock Speed (Mhz) = 
+		 Hyper-threading Supported = 
+		 Level 1 Cache Enabled (at boot time) = 
+		 Level 1 Cache Operational Mode = 
+		 Manufacturer =  
+class name: Processor/Core
+		 Status = 
+		 Core = 
+		 Name = 
+		 Level 2 Cache Enabled (at boot time) = 
+		 Level 3 Cache Operational Mode = 
+		 Level 3 Cache Enabled (at boot time) = 
+		 Version = 
+		 Hyper-threading Status = 
+		 Stepping = 
+		 Level 2 Cache Operational Mode = 
+		 Current Clock Speed (Mhz) = 
+		 Hyper-threading Supported = 
+		 Level 1 Cache Enabled (at boot time) = 
+		 Level 1 Cache Operational Mode = 
+		 Manufacturer = 
+class name: Volumes/Mount Points
+		 Layout = Unknown
+		 Volume Status = Unknown
+		 Free Space = 256.4 GB
+		 Total Capacity = 271.1 GB
+		 File System Name = NTFS
+		 Label =  (System)
+		 Volume = C:\
+		 Quota Status = Disabled
+		 User Free Space = 256.4 GB
+		 User Quota = 271.1 GB
+class name: Volumes/Mount Points
+		 Layout = Unknown
+		 Volume Status = Unknown
+		 Free Space = 
+		 Total Capacity = 
+		 File System Name = 
+		 Label = 
+		 Volume = D:\ (CD-Rom) 
+		 Quota Status = 
+		 User Free Space = 
+		 User Quota = 
+class name: Volumes/Mount Points
+		 Layout = Unknown
+		 Volume Status = Unknown
+		 Free Space = 1.3 MB
+		 Total Capacity = 1.3 MB
+		 File System Name = FAT
+		 Label =  
+		 Volume = F:\
+		 Quota Status = Disabled
+		 User Free Space = 1.3 MB
+		 User Quota = 1.3 MB
+class name: Volumes/Mount Points
+		 Layout = Unknown
+		 Volume Status = Unknown
+		 Free Space = 1.3 MB
+		 Total Capacity = 1.3 MB
+		 File System Name = FAT
+		 Label =  
+		 Volume = G:\
+		 Quota Status = Disabled
+		 User Free Space = 1.3 MB
+		 User Quota = 1.3 MB
+class name: Video Controller
+		 Status = Device is started
+		 Chip Type = 
+		 Name = RDPUDD Chained DD
+		 DAC Type = 
+		 Memory Size = 
+		 Bios String = 
+class name: Video Controller
+		 Scan Mode = Non Interlaced
+		 Vertical Resolution = 818
+		 Display ID = 1
+		 Refresh Rate = 32
+		 Color Quality = 32
+		 Minimum Refresh Rate = 
+		 Horizontal Resolution = 1348
+		 Maximum Refresh Rate = 
+		 Monitor = 
