@@ -77,8 +77,10 @@ def main():
             html_store = html_parser.parse(each_file, 'split')
 
             for class_name in html_store.store:
+                print "class name: %s, instance number: %d" % (class_name, html_store.get_mof_instance_number(class_name))
                 for mof_inst in html_store.get_mof(class_name):
                     mof_inst.output_mof()
+
 
 if __name__ == '__main__':
     main()

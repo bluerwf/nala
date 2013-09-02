@@ -68,3 +68,7 @@ class MOFStore(object):
             return self.store[mof_name]
         else:
             return None
+
+    def get_mof_instance_number(self, mof_name):
+        if mof_name != '' and self.store:
+            return len(self.store[mof_name])
