@@ -1,126 +1,79 @@
-class name: BIOS/uEFI
-		 BuildNumber = KOE111NUS
-		 ReleaseDate = 04/26/2012 00:00:00
-		 Version = 1.00
-		 Name = UEFI
-class name: BIOS/uEFI
-		 BuildNumber =  
-		 ReleaseDate =  
-		 Version = 5.30.00_4.12.05.00_0x05110000
-		 Name = ServeRAID M5110e BIOS
-class name: Diagnostic VPD
-		 BuildNumber = DSYTB7U
-class name: Firmware
-		 Name = Diagnostic VPD
-		 Build Date = 05/15/2013 00:00:00
-		 BuildNumber = DSYTB7U
-		 Version = 9.40
-		 Product Name =  
-		 Device =  
-		 Manufacturer =  
-class name: Firmware
-		 Name = IMM2
-		 Build Date = 05/29/2013 19:26:34
-		 BuildNumber = 1AOO43Q
-		 Version = 3.00
-		 Product Name =  
-		 Device =  
-		 Manufacturer = IBM eServer X
-class name: Firmware
-		 Name = SCSI Device
-		 Build Date =  
-		 BuildNumber =  
-		 Version = 0325
-		 Product Name = 12
-		 Device = Port:0|Target:0|Bus:0|Lun:0
-		 Manufacturer = IMM
-class name: Firmware
-		 Name = SCSI Device
-		 Build Date =  
-		 BuildNumber =  
-		 Version = IS09
-		 Product Name = DVDRAM GT30N
-		 Device = Port:0|Target:0|Bus:0|Lun:0
-		 Manufacturer = HL-DT-ST
-class name: Firmware
-		 Name = SCSI Device
-		 Build Date =  
-		 BuildNumber =  
-		 Version = 3.15
-		 Product Name = ServeRAID M5110e
-		 Device = Port:1|Target:0|Bus:1|Lun:0
-		 Manufacturer = IBM
-class name: Firmware
-		 Name = SCSI Device
-		 Build Date =  
-		 BuildNumber =  
-		 Version = 0001
-		 Product Name = DummyDevice
-		 Device = Port:1|Target:64|Bus:1|Lun:0
-		 Manufacturer = RAID
-class name: Firmware
-		 Name = ServeRAID M5110e Firmware
-		 Build Date = r
-		 BuildNumber =  
-		 Version = 3.151.04-1463
-		 Product Name =  
-		 Device = ServeRAID M5110e(17,0)
-		 Manufacturer = LSIESG
-class name: Firmware
-		 Name = ServeRAID M5110e Package Buil
-		 Build Date = r
-		 BuildNumber =  
-		 Version = 23.2.1-0024
-		 Product Name =  
-		 Device = ServeRAID M5110e(17,0)
-		 Manufacturer = LSIESG
-class name: Firmware
-		 Name = ServeRAID M5110e Physical Device
-		 Build Date = r
-		 BuildNumber =  
-		 Version = SB28
-		 Product Name =  
-		 Device = Disk Drive_62_1
-		 Manufacturer = IBM-ESXS
-class name: Firmware
-		 Name = ServeRAID M5110e Physical Device
-		 Build Date = r
-		 BuildNumber =  
-		 Version = B617
-		 Product Name =  
-		 Device = Disk Drive_62_3
-		 Manufacturer = IBM-ESXS
-class name: Firmware
-		 Name = ServeRAID M5110e Physical Device
-		 Build Date = r
-		 BuildNumber =  
-		 Version = SC17
-		 Product Name =  
-		 Device = Disk Drive_62_5
-		 Manufacturer = IBM-ESXS
-class name: Firmware
-		 Name = ServeRAID M5110e Physical Device
-		 Build Date = r
-		 BuildNumber =  
-		 Version = B62C
-		 Product Name =  
-		 Device = Disk Drive_62_6
-		 Manufacturer = IBM-ESXS
-class name: Other VPD
-		 Part Number = 39Y7237
-		 Serial Number = K10511BE08V
-		 FRUNumber = 39Y7238
-		 Vendor = DELT
-		 Name = Power Supply 1
-class name: Other VPD
-		 Part Number = 81Y4476
-		 Serial Number = Y011US15G8HJ
-		 FRUNumber = 43V7070
-		 Vendor = MOLX
-		 Name = SAS Backplane 1
-class name: Other VPD
-		 Part Number = 95Y2154
-		 Serial Number = Y131BG1CH019
-		 FRUNumber = 81Y3702
-		 Vendor = IBM
-		 Name = System Boar
+class name: Active User Information, instance number: 2
+class name: Active User Information
+		 Domain = SCCM13B
+		 Description = Built-in account for administering the computer/domain
+		 User Name = Administrator
+		 Last Logon Date = 07/15/2013 09:52:07
+		 User ID = Administrator
+		 Logon Server = WIN-LOIT33FQNFA
+class name: Active User Information
+		 Domain = SCCM13B
+		 Description =  
+		 User Name = administrator
+		 Last Logon Date =  
+		 User ID = administrator
+		 Logon Server =  
+class name: System Environment Variables, instance number: 16
+class name: System Environment Variables
+		 Name = ComSpec
+		 Value = C:\Windows\system32\cmd.exe
+class name: System Environment Variables
+		 Name = FP_NO_HOST_CHECK
+		 Value = NO
+class name: System Environment Variables
+		 Name = NUMBER_OF_PROCESSORS
+		 Value = 24
+class name: System Environment Variables
+		 Name = OS
+		 Value = Windows_NT
+class name: System Environment Variables
+		 Name = Path
+		 Value = C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+class name: System Environment Variables
+		 Name = PATHEXT
+		 Value = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+class name: System Environment Variables
+		 Name = PROCESSOR_ARCHITECTURE
+		 Value = AMD64
+class name: System Environment Variables
+		 Name = PROCESSOR_IDENTIFIER
+		 Value = Intel64 Family 6 Model 45 Stepping 6, GenuineIntel
+class name: System Environment Variables
+		 Name = PROCESSOR_LEVEL
+		 Value = 6
+class name: System Environment Variables
+		 Name = PROCESSOR_REVISION
+		 Value = 2d06
+class name: System Environment Variables
+		 Name = PSModulePath
+		 Value = C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+class name: System Environment Variables
+		 Name = TEMP
+		 Value = C:\Windows\TEMP
+class name: System Environment Variables
+		 Name = TMP
+		 Value = C:\Windows\TEMP
+class name: System Environment Variables
+		 Name = UATDATA
+		 Value = C:\Windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+class name: System Environment Variables
+		 Name = USERNAME
+		 Value = SYSTEM
+class name: System Environment Variables
+		 Name = windir
+		 Value = C:\Windows
+class name: Boot Configuration, instance number: 1
+class name: Boot Configuration
+		 Contents =  
+		 Boot Data Source = Windows Boot Manager
+class name: Paging File, instance number: 1
+class name: Paging File
+		 FileSize = 4.5 Gigabytes
+		 Name = C:\pagefile.sys
+class name: User Environment Variables, instance number: 2
+class name: User Environment Variables
+		 Name = TEMP
+		 Value = C:\Users\administrator.SCCM13B\AppData\Local\Temp
+class name: User Environment Variables
+		 Name = TMP
+		 Value = C:\Users\administrator.SCCM13B\AppData\Local\Temp

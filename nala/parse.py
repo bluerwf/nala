@@ -7,6 +7,7 @@ import os
 DEBUG = False
 
 
+
 def list_commands():
     """list the supported commands"""
     return ["parse", "analysis"]
@@ -314,12 +315,6 @@ class NalaHTMLParser(object):
 
         def set_mof():
 
-            if DEBUG:
-                import pdb
-                pdb.set_trace()
-
-            th_number = 0
-            td_number = 0
             if table_type_is == self.__class__.table_type[0]:
                 return set_mof_as_type_I( )
             elif table_type_is == self.__class__.table_type[1]:
@@ -334,33 +329,40 @@ class NalaHTMLParser(object):
 
 
             if DEBUG is True:
-                print "Debug: line = ", line
+                import pdb
+                pdb.set_trace()
             # if line is <td>xxxx</td></tr>
             # remove </tr>
             tr_pos = line.find('</tr>')
-            line = line[:tr_pos]
-            if DEBUG is True:
-                print "Debug: line = ", line
+            if tr_pos >= 0:
+                line = line[:tr_pos]
+            else:
+                line = line.rstrip()
 
-            tmp = line.rstrip().split('<td>')
-            
-            if tmp[0] == '':
-                tmp = tmp[1:]
-            for val in tmp:
-                td_number += 1
-                if val == '</td>':
+            #tmp = line.rstrip().split('<td>')
+            while line:
+                tmp = ' '
+                pos_start = line.find('>')
+                pos_end = line.find('</td', pos_start)
+                pos_cult = line.find('>', pos_end)
+                # Delete special tag
+                # <td> value <br></td>
+                # <td> value </td></br>
+                special_pos = line.find('<', pos_start)
+                if special_pos >= 0:
+                    pos_end = special_pos
+                if pos_end - pos_start == 1:
                     self.attr_value_stack.append(' ')
                 else:
-                    self.attr_value_stack.append(val.strip('</td>'))
+                    self.attr_value_stack.append(line[pos_start+1:pos_end])
+                line = line[pos_cult+1:]
+                td_number += 1
+            return td_number
 
-            # if len(tmp) == 1:
-            #     pattern = re.compile(r"<td.*>(.*)</td>")
-            #     attr_value_stack.append(re.findall(pattern, tmp[0])[0])
-            #     td_number += 1
-
-            if DEBUG is True:
-                print self.attr_value_stack   
         def set_mof_as_type_I( ):
+
+            if DEBUG:
+                print "in type I"
 
 
             if len(self.attr_name_stack) == 0 or len(self.attr_value_stack) == 0:
@@ -388,9 +390,19 @@ class NalaHTMLParser(object):
 
         def set_mof_as_type_II( ):
 
-            return self._set_mof_as_type_I( )
+            if DEBUG:
+                print "in type II"
 
-        def set_mof_as_type_III( ):
+            return set_mof_as_type_I( )
+
+        def set_mof_as_type_III():
+
+            if DEBUG:
+                print "in type III"
+
+            if DEBUG:
+                import pdb
+                pdb.set_trace()
 
             # Empty attributes
             if len(self.attr_name_stack) == 0 or len(self.attr_value_stack) == 0:
@@ -434,12 +446,17 @@ class NalaHTMLParser(object):
                     for j = [o..len(P)-1]:
                         tmp_mof.set_parameters(class, P[j], V[i+j*n])))
             """
+            #import pdb
+            #pdb.set_trace()
             for i in range(0, self._inst_number_of_table_III):
                 tmp_mof = mof.MOF(self._class_name)
-                html_store.add_mof(tmp_mof)
+                self.html_store.add_mof(tmp_mof)
                 for j in range(0, len(self.attr_name_stack)):
                     tmp_mof.set_parameters(self._class_name, self.attr_name_stack[j], 
                         self.attr_value_stack[i + j*self._inst_number_of_table_III])
+            self.attr_name_stack = []
+            self.attr_value_stack = []
+
         if f:
             try:
                 line = f.readline()
@@ -455,9 +472,9 @@ class NalaHTMLParser(object):
                         td_number = 0
                     elif m_inst:
                         # New instance will come, set the parameters
-                        #tmp_mof = mof.MOF(self._class_name)
-                        #self.html_store.add_mof(tmp_mof)
                         set_mof()
+                        th_number = 0
+                        td_number = 0
 
                     elif m_attr:
                         if th_number == 0:
@@ -467,7 +484,7 @@ class NalaHTMLParser(object):
                         if DEBUG:
                             print self.attr_name_stack
                     elif line.startswith('<td'):
-                        append_attr_value_stack(line, td_number)
+                        td_number = append_attr_value_stack(line, td_number)
                     elif start_count_tr is True and line.startswith('<tr'):
                             table_type_is = self._get_table_type(th_number, td_number)
                             start_count_tr = False

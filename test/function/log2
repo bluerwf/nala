@@ -1,44 +1,132 @@
-class name: SNMP Community
-		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
-		 Name = Community-1
-		 CommunityString =  
-class name: SNMP Community
-		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
-		 Name = Community-2
-		 CommunityString =  
-class name: SNMP Community
-		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
-		 Name = Community-3
-		 CommunityString =  
-class name: DHCP IPv4 Address
-		 IPv4Address = 9.115.252.134
-		 SubnetMask = 255.255.252.0
-		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
-class name: IPv6 Stateless Address
-		 PrefixLength = 0
-		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
-		 IPv6Address = 2002:97b:c2bb:830:e61f:13ff:fed9:99
-class name: IPv6 Stateless Address
-		 PrefixLength = 0
-		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
-		 IPv6Address = 2002:977:290a:5:e61f:13ff:fed9:99
-class name: IPv6 Stateless Address
-		 PrefixLength = 0
-		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
-		 IPv6Address = 2002:973:fc11:5:e61f:13ff:fed9:99
-class name: IPv6 Stateless Address
-		 PrefixLength = 0
-		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
-		 IPv6Address = fec0::5:e61f:13ff:fed9:99
-class name: CIM:dnsdata2
-		 RequestedHostname = IMM2-e41f13d9099
-		 ElementName = DNS Setting Data 2 for IPv6
-		 DNSServerAddresses =  
-class name: CIM:dnsdata1
-		 RequestedHostname = IMM2-e41f13d9099
-		 ElementName = DNS Setting Data 1 for IPv4
-		 DNSServerAddresses =  
-class name: IPv6 Local Link Address
-		 PrefixLength = 0
-		 SystemName = Management Controller UUID-614C721C3D1711E198CDE41F13DA1082
-		 IPv6Address = fe80::e61f:13ff:fed9:99
+in type I
+in type III
+in type III
+in type II
+in type I
+class name: Physical Network Ports, instance number: 5
+class name: Physical Network Ports
+		 Network connection = Disabled (Down)
+		 Gateways = 0.0.0.0
+		 DHCP Enabled = true
+		 Driver Loaded = true
+		 DHCP Server =  
+		 DNS Server Addresses = Not Available
+		 Description = Emulex OneConnect OCl11104-F2-X, NIC/TOE
+		 IPv6Address = FE80:00:00:00:F02B:E761:2D90:E5C
+		 Primary WINS Server =  
+		 LinkTechnology = Ethernet
+		 Auto Private IP Addressing Active = false
+		 Name = {3E17F039-DAC3-4ED3-88C0-2478B55774B2}
+		 WINS Enabled = false
+		 NetworkAddresses = E4:1F:13:DA:10:80
+		 DeviceID = \DEVICE\TCPIP_{3E17F039-DAC3-4ED3-88C0-2478B55774B2}
+		 Secondary WINS Server =  
+		 IPv4Address = 0.0.0.0/0
+		 PermanentAddress = E4:1F:13:DA:10:80
+		 Link Speed and Duplex = Unknown
+		 Auto Private IP Addressing Enabled = true
+		 NIC Type = Unknown NIC
+		 ActiveMaximumTransmissionUnit = 1.5 Kilobytes
+		 Speed = 0 Bits per second
+class name: Physical Network Ports
+		 Network connection = Disabled (Down)
+		 Gateways = 0.0.0.0
+		 DHCP Enabled = true
+		 Driver Loaded = true
+		 DHCP Server =  
+		 DNS Server Addresses = Not Available
+		 Description = Emulex OneConnect OCl11104-F2-X, NIC/TOE #2
+		 IPv6Address = FE80:00:00:00:942F:8AE2:C98D:E8E6
+		 Primary WINS Server =  
+		 LinkTechnology = Ethernet
+		 Auto Private IP Addressing Active = false
+		 Name = {EAFBB83C-43CF-444A-BA0A-A40C23A6F227}
+		 WINS Enabled = false
+		 NetworkAddresses = E4:1F:13:DA:10:84
+		 DeviceID = \DEVICE\TCPIP_{EAFBB83C-43CF-444A-BA0A-A40C23A6F227}
+		 Secondary WINS Server =  
+		 IPv4Address = 0.0.0.0/0
+		 PermanentAddress = E4:1F:13:DA:10:84
+		 Link Speed and Duplex = Unknown
+		 Auto Private IP Addressing Enabled = true
+		 NIC Type = Unknown NIC
+		 ActiveMaximumTransmissionUnit = 1.5 Kilobytes
+		 Speed = 0 Bits per second
+class name: Physical Network Ports
+		 Network connection = Enabled (Up)
+		 Gateways = 9.115.252.1
+		 DHCP Enabled = true
+		 Driver Loaded = true
+		 DHCP Server = 9.115.252.10
+		 DNS Server Addresses = 9.115.254.38
+		 Description = Emulex OneConnect OCl11104-F2-X, NIC/TOE #3
+		 IPv6Address = 2002:973:FC11:05:197D:D446:EF1B:BC15
+		 Primary WINS Server =  
+		 LinkTechnology = Ethernet
+		 Auto Private IP Addressing Active = false
+		 Name = {B281F887-F112-43C1-A6A3-1064BBFE3229}
+		 WINS Enabled = false
+		 NetworkAddresses = E4:1F:13:DA:10:82
+		 DeviceID = \DEVICE\TCPIP_{B281F887-F112-43C1-A6A3-1064BBFE3229}
+		 Secondary WINS Server =  
+		 IPv4Address = 9.115.252.131/22
+		 PermanentAddress = E4:1F:13:DA:10:82
+		 Link Speed and Duplex = Unknown
+		 Auto Private IP Addressing Enabled = true
+		 NIC Type = Unknown NIC
+		 ActiveMaximumTransmissionUnit = 1.5 Kilobytes
+		 Speed = 1000 Megabits per second
+class name: Physical Network Ports
+		 Network connection = Enabled (Up)
+		 Gateways = 9.115.252.1
+		 DHCP Enabled = true
+		 Driver Loaded = true
+		 DHCP Server = 9.115.252.10
+		 DNS Server Addresses = 9.115.252.10
+		 Description = Emulex OneConnect OCl11104-F2-X, NIC/TOE #4
+		 IPv6Address = 2002:973:FC11:05:95BF:FA53:DD2A:5DD4
+		 Primary WINS Server =  
+		 LinkTechnology = Ethernet
+		 Auto Private IP Addressing Active = false
+		 Name = {0C64654F-2164-418B-9F16-10339BD714E6}
+		 WINS Enabled = false
+		 NetworkAddresses = E4:1F:13:DA:10:86
+		 DeviceID = \DEVICE\TCPIP_{0C64654F-2164-418B-9F16-10339BD714E6}
+		 Secondary WINS Server =  
+		 IPv4Address = 9.115.252.152/22
+		 PermanentAddress = E4:1F:13:DA:10:86
+		 Link Speed and Duplex = Unknown
+		 Auto Private IP Addressing Enabled = true
+		 NIC Type = Unknown NIC
+		 ActiveMaximumTransmissionUnit = 1.5 Kilobytes
+		 Speed = 1000 Megabits per second
+class name: Physical Network Ports
+		 Network connection = Enabled (Up)
+		 Gateways = 0.0.0.0
+		 DHCP Enabled = true
+		 Driver Loaded = true
+		 DHCP Server = 169.254.95.118
+		 DNS Server Addresses =  
+		 Description = IBM USB Remote NDIS Network Device
+		 IPv6Address = FE80:00:00:00:C483:A5BB:6484:1AA2
+		 Primary WINS Server =  
+		 LinkTechnology = Ethernet
+		 Auto Private IP Addressing Active = true
+		 Name = {F37B9461-8E0E-4E6B-81C8-3ABB80AE43DB}
+		 WINS Enabled = false
+		 NetworkAddresses = E6:1F:13:D9:09:9F
+		 DeviceID = \DEVICE\TCPIP_{F37B9461-8E0E-4E6B-81C8-3ABB80AE43DB}
+		 Secondary WINS Server =  
+		 IPv4Address = 169.254.95.120/24
+		 PermanentAddress = E6:1F:13:D9:09:9F
+		 Link Speed and Duplex = Unknown
+		 Auto Private IP Addressing Enabled = true
+		 NIC Type = Unknown NIC
+		 ActiveMaximumTransmissionUnit = 1.5 Kilobytes
+		 Speed = 0 Bits per second
+class name: Global Settings, instance number: 1
+class name: Global Settings
+		 Host Name = WINDOWS-TUJ7F5F
+		 Routing Enabled = false
+		 ARP Proxy Enabled = false
+		 Domain Name = sccm13b.com
