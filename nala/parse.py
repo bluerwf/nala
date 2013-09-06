@@ -10,7 +10,7 @@ DEBUG = False
 
 def list_commands():
     """list the supported commands"""
-    return ["cmpare", "analysis"]
+    return ["compare", "analysis"]
 
 
 def is_mof_instance(line):

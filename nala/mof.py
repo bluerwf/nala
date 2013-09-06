@@ -27,6 +27,10 @@ class MOF(object):
 			print "class name: %s" % self.class_name
 			for key in self.mof_parameters:
 				print '\t\t %s = %s' %(key, self.mof_parameters[key])
+    #TBD
+    def __cmp__(self, other):
+        pass
+
 
 class MOFStore(object):
 

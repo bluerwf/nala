@@ -2,6 +2,7 @@
 
 import sys
 import os
+import logging
 
 import nala.mof as mof
 from nala.parse import list_commands, mof_parse, NalaHTMLParser
@@ -9,13 +10,116 @@ from nala.parse import list_commands, mof_parse, NalaHTMLParser
 from optparse import OptionParser
 
 
-USAGE = """%prog <file> [<file> ...] <command> [options]
+USAGE = """%prog [options] <command> 
 
 Commands:
 """ + '\n'.join(["\t %s" % x for x in list_commands()])
 
+VERSION = "%prog 1.0"
 
 
+class NalaCompare(object):
+	"""To implement the comparsion between 
+	mof file and html files. Need one mof file and
+	one html file at least."""
+	def __init__(self, mof, html=None, dirpath=None, logpath="/tmp/", report=False):
+		super(NalaCompare, self).__init__()
+		self.mof = mof
+		self.html = html
+		self.dir = dirpath
+		self.logpath = logpath
+		self.result = {}
+		self.report = report
+
+	def init_log(self, level=0):
+
+		self.logger = logging.getLogger()
+		hdlr = logging.FileHandler(self.logpath+"/nala-compare.log")
+		formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+		hdlr.setFormatter(formatter)
+		self.logger.addHandler(hdlr)
+
+		if level == 0:
+			self.logger.setLevel(logging.NOTSET)
+		elif level == 10:
+			self.logger.setLevel(logging.DEBUG)
+		elif level == 20:
+			self.logger.setLevel(logging.INFO)
+		elif level == 30:
+			self.logger.setLevel(logging.WARNING)
+		elif level == 40:
+			self.logger.setLevel(logging.ERROR)
+		elif level == 50:
+			self.logger.setLevel(logging.CRITICAL)
+		else:
+			self.logger.setLevel(logging.DEBUG)
+
+		return self.logger
+
+	def compare(self):	
+
+		self.init_log(10)
+		if os.access(self.mof, os.R_OK):
+			mof_store = mof_parse(self.mof)
+		if os.access(self.html, os.R_OK):
+			html_store = mof.MOFStore(self.html)
+			html_parser = NalaHTMLParser()
+			html_parser.set_store(html_store)
+			html_store = html_parser.parse(self.html, 'split')
+
+		for each_class in mof_store.store:
+			for mof_inst in mof_store.get_mof(each_class):
+				for html_inst in html_store.get_mof(each_class):
+					if mof_inst == html_inst:
+						mof_store.store[each_class].pop(mof_inst)
+						html_store.store[each_class].pop(html_inst)
+						break
+
+			if len(mof_store.get_mof(each_class)) > 0:
+				self.result[each_class] = "FAILED"
+			else:
+				self.result[each_class] = "SUCCESS"
+
+def main():
+
+	parser = OptionParser(USAGE, version=VERSION)
+
+	parser.add_option('-p', '--path', type="string", dest="dirname",
+                      action="store", default=False, help="html files in the directory")
+	parser.add_option(
+    	'-f', '--htmlfile', type="string", dest="htmlfile", action="store",
+        default=False, help="files to be compared")
+	parser.add_option(
+        '-m', '--moffile', type="string", dest="moffile", action="store",
+        default=False, help="files to be compared")
+	parser.add_option(
+        '-l', '--logpath', type="string", dest="logpath", action="store",
+        default="/tmp", help="log path to output logs")
+	parser.add_option('-v', action="store_true",
+                      dest="verbose", help="output verbose report")
+	parser.add_option(
+        '-d', action="store_true", dest="debug", help="Debug mode")
 
 
+	options, args = parser.parse_args()
 
+	if options.debug:
+		import pdb
+		pdb.set_trace()
+
+	if len(args) != 1:
+		parser.print_help()
+		exit(1)
+	if options.dirname and options.htmlfile:
+		parser.error("options -d and -f are mutually exclusive!")
+
+	command = args[-1]
+
+	compare = NalaCompare(options.moffile, options.htmlfile, options.dirname,
+	                      options.logpath, options.verbose)
+	compare.compare()
+
+
+if __name__ == '__main__':
+
+	main()
