@@ -1,0 +1,21 @@
+#! /usr/bin/env python
+
+import sys
+import os
+
+import nala.mof as mof
+from nala.parse import list_commands, mof_parse, NalaHTMLParser
+
+from optparse import OptionParser
+
+
+USAGE = """%prog <file> [<file> ...] <command> [options]
+
+Commands:
+""" + '\n'.join(["\t %s" % x for x in list_commands()])
+
+
+
+
+
+
