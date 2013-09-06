@@ -9,7 +9,7 @@ class MOF(object):
 		self.class_name = name
 		self.mof_parameters = {}
 
-	def get_mof(self):
+	def get_mof_info(self):
 		if self.class_name != ' ':
 			return self.class_name, self.mof_parameters
 	def set_classname(self, class_name):
@@ -28,8 +28,6 @@ class MOF(object):
 			for key in self.mof_parameters:
 				print '\t\t %s = %s' %(key, self.mof_parameters[key])
 
-
-
 class MOFStore(object):
 
     """docstring for MOFStore"""
@@ -39,19 +37,6 @@ class MOFStore(object):
         super(MOFStore, self).__init__()
         self.store_name = store_name
         self.store = {}
-        self.status = 'open'
-
-    def open_store(self):
-    	if self.status == 'closed':
-    		self.status = 'open'
-    	else:
-    		print "store: %s has open" % self.store_name
-
-    def close_store(self):
-        if self.status == 'open':
-        	self.status = 'closed'
-        else:
-        	print "store: %s has closed" % self.store_name
 
     def add_mof(self, mof):
         if mof.class_name is None:
@@ -64,11 +49,13 @@ class MOFStore(object):
                 self.store[mof.class_name].append(mof)
 
     def get_mof(self, mof_name):
-        if mof_name != '' and self.store:
+        if mof_name != '' and mof_name in self.store:
             return self.store[mof_name]
         else:
             return None
 
     def get_mof_instance_number(self, mof_name):
-        if mof_name != '' and self.store:
+        if mof_name != '' and mof_name in self.store:
             return len(self.store[mof_name])
+        else:
+            return -1

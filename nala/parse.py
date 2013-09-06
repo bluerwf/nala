@@ -10,7 +10,7 @@ DEBUG = False
 
 def list_commands():
     """list the supported commands"""
-    return ["parse", "analysis"]
+    return ["cmpare", "analysis"]
 
 
 def is_mof_instance(line):
@@ -158,7 +158,8 @@ class CustomParse(HTMLParser):
         # to add a ' ' attribute into attribute value lists
         # if len(self._attr_name) > 0 and string.join(self._tag_stack) == 'br
         # table tr' and self._data_flag is True and self._attr_is_full is True:
-        if len(self._attr_name) > 0 and re.match(self.__class__.emptytdpattern, stack) and self._data_flag is True and self._attr_is_full is True:
+        if len(self._attr_name) > 0 and re.match(self.__class__.emptytdpattern, stack) and \
+        self._data_flag is True and self._attr_is_full is True:
         # if len(self._attr_name) > 0 and string.join(self._tag_stack) == 'br
         # table tr' and self._attr_is_full is True:
             if len(self._attr_value) < len(self._attr_name):
@@ -525,7 +526,8 @@ class NalaHTMLParser(object):
                                 if i % len(attr_name_stack) == 0:
                                     tmp_mof = mof.MOF(self._class_name)
                                     self.html_store.add_mof(tmp_mof)
-                                tmp_mof.set_parameters(self._class_name, attr_name_stack[i % len(attr_name_stack)], attr_value_stack[i])
+                                tmp_mof.set_parameters(self._class_name, 
+                                    attr_name_stack[i % len(attr_name_stack)], attr_value_stack[i])
                             attr_name_stack = []
                             attr_value_stack = []
                         else:
