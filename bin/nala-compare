@@ -56,42 +56,53 @@ class NalaCompare(object):
 
 		return self.logger
 
-	def compare(self):	
+	def compare(self, moffile, htmlfile):
 
 		self.init_log(10)
-		if os.access(self.mof, os.R_OK):
-			mof_store = mof_parse(self.mof)
+
+		mof_store = None
+		html_store = None
+
+		mof_file = os.path.abspath(moffile)
+
+		html_file = os.path.abspath(htmlfile)
+
+		if os.access(mof_file, os.R_OK):
+			mof_store = mof_parse(mof_file)
+
 		if os.access(self.html, os.R_OK):
-			html_store = mof.MOFStore(self.html)
+			html_store = mof.MOFStore(html_file)
 			html_parser = NalaHTMLParser()
 			html_parser.set_store(html_store)
-			html_store = html_parser.parse(self.html, 'split')
+			html_store = html_parser.parse(html_file, 'split')
 
-		for each_class in mof_store.store:
-			for mof_inst in mof_store.get_mof(each_class):
-				for html_inst in html_store.get_mof(each_class):
-					if mof_inst == html_inst:
-						mof_store.store[each_class].pop(mof_inst)
-						html_store.store[each_class].pop(html_inst)
-						break
+		if self.logger.level > 0:
+			self.logger.info(mof_store.store_name)
+			for each in mof_store.get_mof():
+				self.logger.info(each.get_mof_info())
+			self.logger.info(html_store.store_name)
 
-			if len(mof_store.get_mof(each_class)) > 0:
-				self.result[each_class] = "FAILED"
-			else:
-				self.result[each_class] = "SUCCESS"
+			for class_name in html_store.store:
+				for each in html_store.get_mof(class_name):
+					self.logger.info(each.get_mof_info())
+
+	def compare_dir(self, moffile, htmldir):
+		# TBD
+		pass
+
 
 def main():
 
 	parser = OptionParser(USAGE, version=VERSION)
 
 	parser.add_option('-p', '--path', type="string", dest="dirname",
-                      action="store", default=False, help="html files in the directory")
+                      action="store", default=None, help="html files in the directory")
 	parser.add_option(
     	'-f', '--htmlfile', type="string", dest="htmlfile", action="store",
-        default=False, help="files to be compared")
+        default=None, help="files to be compared")
 	parser.add_option(
         '-m', '--moffile', type="string", dest="moffile", action="store",
-        default=False, help="files to be compared")
+        default=None, help="files to be compared")
 	parser.add_option(
         '-l', '--logpath', type="string", dest="logpath", action="store",
         default="/tmp", help="log path to output logs")
@@ -117,7 +128,11 @@ def main():
 
 	compare = NalaCompare(options.moffile, options.htmlfile, options.dirname,
 	                      options.logpath, options.verbose)
-	compare.compare()
+
+	if options.dirname is None and options.htmlfile:
+		compare.compare(options.moffile, options.htmlfile)
+	elif options.dirname:
+		compare.compare_dir(options.dirname, options.htmlfile)
 
 
 if __name__ == '__main__':

@@ -55,20 +55,6 @@ def main():
     		for mof_inst in mof_store.get_mof(class_name):
     			mof_inst.output_mof()
 
-    # if len(html_files) > 0:
-    #     for each_file in html_files:
-    #         html_store = mof.MOFStore(each_file)
-    #         #html_parser = CushtomParse()
-    #         html_parser = NalaHTMLParse()
-    #         html_parser.set_store(html_store)
-    #         print "html store: %s" % html_parser.html_store.store_name
-    #         with open(each_file, 'r') as f:
-    #             for each_line in f:
-    #                 html_parser.feed(each_line)
-    #         for class_name in html_parser.html_store.store:
-    #             for mof_inst in html_parser.html_store.get_mof(class_name):
-    #                 mof_inst.output_mof()
-
     if len(html_files) > 0:
         for  each_file in html_files:
             html_store = mof.MOFStore(each_file)
