@@ -30,35 +30,9 @@ class NalaCompare(object):
 		self.logpath = logpath
 		self.result = {}
 		self.report = report
-
-	def init_log(self, level=0):
-
-		self.logger = logging.getLogger()
-		hdlr = logging.FileHandler(self.logpath+"/nala-compare.log")
-		formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
-		hdlr.setFormatter(formatter)
-		self.logger.addHandler(hdlr)
-
-		if level == 0:
-			self.logger.setLevel(logging.NOTSET)
-		elif level == 10:
-			self.logger.setLevel(logging.DEBUG)
-		elif level == 20:
-			self.logger.setLevel(logging.INFO)
-		elif level == 30:
-			self.logger.setLevel(logging.WARNING)
-		elif level == 40:
-			self.logger.setLevel(logging.ERROR)
-		elif level == 50:
-			self.logger.setLevel(logging.CRITICAL)
-		else:
-			self.logger.setLevel(logging.DEBUG)
-
-		return self.logger
+		self.logger = mof.NalaLog(self.logpath).get_logger()
 
 	def compare(self, moffile, htmlfile):
-
-		self.init_log(10)
 
 		mof_store = None
 		html_store = None
@@ -86,10 +60,61 @@ class NalaCompare(object):
 				for each in html_store.get_mof(class_name):
 					self.logger.info(each.get_mof_info())
 
-	def compare_dir(self, moffile, htmldir):
-		# TBD
-		pass
+		if mof_store and html_store:
+			for each_class in mof_store.store:
+				if each_class in html_store.store:
+					for each_inst in mof_store.get_mof(each_class):
+						if each_inst == html_store.get_mof(each_class):
+							mof_store.store[each_class].pop(each_inst)
+							html_store.store[each_class].pop(each_inst)
+					if len(mof_store.get_mof(each_class) == 0:
+						self.logger.info("%s of mof equals to %s of html" % (each_class, each_class))
+						self.result[each_class] = "PASS"
+					else:
+						self.result[each_class] = "FAIL"
+						self.logger.info("%s of mof differs with %s of html"%(each_class, each_class))
+						self.logger.info("Details: %s"% mof_store.get_mof(each_class)[0].get_mof_info()[0])
+						for x in mof_store.get_mof(each_class)[0].get_mof_info()[1]:
+							self.logger.info("Details: %s"% mof_store.get_mof(each_class)[0].get_mof_info()[0][x])
+						self.logger.info("Details: %s"% html_store.get_mof(each_class)[0].get_mof_info()[0])
+					    for x in html_store.get_mof(each_class)[0].get_mof_info()[1]:
+							self.logger.info("Details: %s"% html_store.get_mof(each_class)[0].get_mof_info()[0][x]))
 
+			for each_result in self.result:
+				self.logger.info("Result: %s"%self.result[each_result])
+
+		return self.result
+
+	def compare_dir(self, moffile, htmldir):
+		if os.access(htmldir, R_OK):
+			html_files = os.listdir(htmldir)
+			if len(html_files) > 0:
+				for each_file in html_files:
+					self.compare(moffile, os.path.abspath(each_file))
+		else:
+			self.logger.error("%s does not exist"%htmldir)
+
+	def report(self, formatter=None):
+
+		if formatter:
+			pass
+		elif formatter is None:
+			pass_num = 0
+			fail_num = 0
+			def add_count(result):
+				if result == "PASS":
+					return pass_num += 1
+				elif result == "FAIL":
+					return fail_num += 1
+				else:
+					return 0
+			for each_result in self.result:
+				add_count(each_result)
+
+			if fail_num > 0:
+				print "Test failed: "
+				print "PASS: %d " % pass_num
+				print "Failed %d " % fail_num
 
 def main():
 
@@ -133,6 +158,8 @@ def main():
 		compare.compare(options.moffile, options.htmlfile)
 	elif options.dirname:
 		compare.compare_dir(options.dirname, options.htmlfile)
+
+	compare.report()
 
 
 if __name__ == '__main__':

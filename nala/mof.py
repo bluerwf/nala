@@ -11,6 +11,7 @@ class MOF(object):
         super(MOF, self).__init__()
         self.class_name = name
         self.mof_parameters = {}
+        self.logger = NalaLog("/tmp", 10).get_logger()
 
     def get_mof_info(self):
         if self.class_name != ' ':
@@ -23,29 +24,34 @@ class MOF(object):
         if class_name == self.class_name:
             self.mof_parameters[para_name] = value
         else:
-            print "ERROR: Try to import %s paramter to %s " % (class_name, self.class_name)
+            self.logger.info("ERROR: Try to import %s paramter to %s " % (class_name, self.class_name))
             sys.exit(1)
 
     def output_mof(self):
         if self.class_name:
+            self.logger.info("class name: %s" % self.class_name)
             print "class name: %s" % self.class_name
             for key in self.mof_parameters:
                 print '\t\t %s = %s' % (key, self.mof_parameters[key])
+                self.logger.info('\t\t %s = %s' % (key, self.mof_parameters[key]))
 
     def __eq__(self, other):
 
         if self and other:
             if id(self) == id(other):
-                return 0
+                return 1
             else:
                 if self.class_name == other.class_name:
                     for attr in self.mof_parameters:
-                        if getattr(self, attr) != getattr(other, attr):
-                            return -1
-                    return 0
+                        if self.mof_parameters[attr] != other.mof_parameters[attr]:
+                            print "%s != %s" %(self.mof_parameters[attr], other.mof_parameters[attr])
+                            self.logger.info("%s != %s" %(self.mof_parameters[attr], other.mof_parameters[attr]))
+                            return 0
+                    return 1
         else:
             print "None objects are comparing"
-            return 0
+            self.logger.info("None objects are comparing")
+            return 1
 
 class MOFStore(object):
 
@@ -79,3 +85,32 @@ class MOFStore(object):
             return len(self.store[mof_name])
         else:
             return -1
+
+class NalaLog(object):
+    """docstring for NalaLog"""
+    def __init__(self, logpath, name=None, level=10):
+        super(NalaLog, self).__init__()
+        self.logger = logging.getLogger(name)
+        hdlr = logging.FileHandler(logpath+"/nala-compare.log")
+        formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+        hdlr.setFormatter(formatter)
+        self.logger.addHandler(hdlr)
+
+        if level == 0:
+            self.logger.setLevel(logging.NOTSET)
+        elif level == 10:
+            self.logger.setLevel(logging.DEBUG)
+        elif level == 20:
+            self.logger.setLevel(logging.INFO)
+        elif level == 30:
+            self.logger.setLevel(logging.WARNING)
+        elif level == 40:
+            self.logger.setLevel(logging.ERROR)
+        elif level == 50:
+            self.logger.setLevel(logging.CRITICAL)
+        else:
+            self.logger.setLevel(logging.DEBUG)
+
+    def get_logger(self):
+
+            return self.logger

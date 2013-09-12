@@ -1,5 +1,6 @@
 import re
 import string
+import logging
 from . import mof
 from HTMLParser import HTMLParser
 import os
@@ -276,6 +277,7 @@ class NalaHTMLParser(object):
         self._class_name = ' '
         self._new_inst = False
         self._inst_number_of_table_III = 0
+        self.logger = mof.NalaLog("/tmp", 10).get_logger()
 
     def parse(self, file_path, mode='reg'):
         
@@ -285,6 +287,7 @@ class NalaHTMLParser(object):
             return self._parse_split(file_path)
         else:
             print "Unkown parse mode"
+            self.logger.debug("Unkown parse mode")
             return None
 
     
@@ -294,6 +297,8 @@ class NalaHTMLParser(object):
         if DEBUG is True:
             print "Debug: %s th_number: %d" % (__file__, th_number)
             print "Debug: %s td_number: %d" % (__file__, td_number)
+            self.logger.debug("Debug: %s th_number: %d" % (__file__, th_number))
+            self.logger.debug("Debug: %s td_number: %d" % (__file__, td_number))
         if th_number > td_number and th_number > 0:
             return self.__class__.table_type[0]
         elif th_number == td_number and td_number == 1:
@@ -304,7 +309,6 @@ class NalaHTMLParser(object):
 
     def _parse_split(self, file_path):
 
-        f = self._open_file(file_path)
         tmp_mof = None
         self.attr_name_stack = []
         self.attr_value_stack = []
@@ -312,6 +316,7 @@ class NalaHTMLParser(object):
         td_number = 0
         start_count_tr = False
         table_type_is = None
+        f = self._open_file(file_path)
 
 
         def set_mof():
@@ -324,6 +329,7 @@ class NalaHTMLParser(object):
                return  set_mof_as_type_III( )
             else:
                 print "Unkown table type: ", table_type_is
+                self.logger.debug("Unkown table type: %s"%table_type_is)
                 return None
 
         def append_attr_value_stack(line, td_number):
@@ -496,6 +502,7 @@ class NalaHTMLParser(object):
                 print e
         else:
             print "File open error"
+            self.logger.debug("File %s open error" % file_path)
         return self.html_store
     def _parse_reg(self, file_path):
 
@@ -554,6 +561,7 @@ class NalaHTMLParser(object):
             return self.html_store
         else:
             print "File open failed!"
+            self.logger.debug("File %s open failed" % file_path)
 
     def _open_file(self, file_path):
         if os.access(file_path, os.R_OK):
@@ -564,6 +572,7 @@ class NalaHTMLParser(object):
                 print e
         else:
             print "Can't access file: %s" % file_path
+            self.logger.debug("Can't access file: %s" % file_path)
 
     def set_store(self, store):
         ''' store is the MOFStore instance'''
@@ -571,3 +580,4 @@ class NalaHTMLParser(object):
             self.html_store = store
         else:
             print "Store has been set, can't set again"
+            self.logger.info("Store has been set, can't set again")
