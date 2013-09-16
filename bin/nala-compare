@@ -10,7 +10,7 @@ from nala.parse import list_commands, mof_parse, NalaHTMLParser
 from optparse import OptionParser
 
 
-USAGE = """%prog [options] <command> 
+USAGE = """%prog [options] <command>
 
 Commands:
 """ + '\n'.join(["\t %s" % x for x in list_commands()])
@@ -19,12 +19,13 @@ VERSION = "%prog 1.0"
 
 
 class NalaCompare(object):
-	"""To implement the comparsion between 
+
+	"""To implement the comparsion between
 	mof file and html files. Need one mof file and
 	one html file at least."""
-	def __init__(self, mof, html=None, dirpath=None, logpath="/tmp/", report=False):
+	def __init__(self, mof_name, html=None, dirpath=None, logpath="/tmp/", report=False):
 		super(NalaCompare, self).__init__()
-		self.mof = mof
+		self.mof = mof_name
 		self.html = html
 		self.dir = dirpath
 		self.logpath = logpath
@@ -67,18 +68,23 @@ class NalaCompare(object):
 						if each_inst == html_store.get_mof(each_class):
 							mof_store.store[each_class].pop(each_inst)
 							html_store.store[each_class].pop(each_inst)
-					if len(mof_store.get_mof(each_class) == 0:
-						self.logger.info("%s of mof equals to %s of html" % (each_class, each_class))
+					if len(mof_store.get_mof(each_class)) == 0:
+						self.logger.info("%s of mof equals to %s of html" % (
+							each_class, each_class))
 						self.result[each_class] = "PASS"
 					else:
 						self.result[each_class] = "FAIL"
-						self.logger.info("%s of mof differs with %s of html"%(each_class, each_class))
-						self.logger.info("Details: %s"% mof_store.get_mof(each_class)[0].get_mof_info()[0])
+						self.logger.info("%s of mof differs with %s of html" % (
+							each_class, each_class))
+						self.logger.info("Details: %s" % mof_store.get_mof(
+							each_class)[0].get_mof_info()[0])
 						for x in mof_store.get_mof(each_class)[0].get_mof_info()[1]:
-							self.logger.info("Details: %s"% mof_store.get_mof(each_class)[0].get_mof_info()[0][x])
-						self.logger.info("Details: %s"% html_store.get_mof(each_class)[0].get_mof_info()[0])
-					    for x in html_store.get_mof(each_class)[0].get_mof_info()[1]:
-							self.logger.info("Details: %s"% html_store.get_mof(each_class)[0].get_mof_info()[0][x]))
+							self.logger.info("Details: %s" % mof_store.get_mof(
+								each_class)[0].get_mof_info()[0][x])
+						self.logger.info("Details: %s" % html_store.get_mof(
+							each_class)[0].get_mof_info()[0])
+						for x in html_store.get_mof(each_class)[0].get_mof_info()[1]:
+							self.logger.info("Details: %s"% html_store.get_mof(each_class)[0].get_mof_info()[0][x])
 
 			for each_result in self.result:
 				self.logger.info("Result: %s"%self.result[each_result])
@@ -92,7 +98,8 @@ class NalaCompare(object):
 				for each_file in html_files:
 					self.compare(moffile, os.path.abspath(each_file))
 		else:
-			self.logger.error("%s does not exist"%htmldir)
+			pass
+			#self.logger.error("%s does not exist"%os.path.abspath(htmldir))
 
 	def report(self, formatter=None):
 
@@ -103,9 +110,11 @@ class NalaCompare(object):
 			fail_num = 0
 			def add_count(result):
 				if result == "PASS":
-					return pass_num += 1
+					pass_num += 1
+					return pass_num
 				elif result == "FAIL":
-					return fail_num += 1
+					fail_num += 1
+					return fail_num
 				else:
 					return 0
 			for each_result in self.result:

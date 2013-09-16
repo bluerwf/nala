@@ -2,6 +2,8 @@
 
 import sys
 import logging
+from nala.map import mof_to_html_map
+
 
 class MOF(object):
 
@@ -24,7 +26,8 @@ class MOF(object):
         if class_name == self.class_name:
             self.mof_parameters[para_name] = value
         else:
-            self.logger.info("ERROR: Try to import %s paramter to %s " % (class_name, self.class_name))
+            self.logger.info("ERROR: Try to import %s paramter to %s " % (
+                class_name, self.class_name))
             sys.exit(1)
 
     def output_mof(self):
@@ -33,7 +36,8 @@ class MOF(object):
             print "class name: %s" % self.class_name
             for key in self.mof_parameters:
                 print '\t\t %s = %s' % (key, self.mof_parameters[key])
-                self.logger.info('\t\t %s = %s' % (key, self.mof_parameters[key]))
+                self.logger.info('\t\t %s = %s' % (
+                    key, self.mof_parameters[key]))
 
     def __eq__(self, other):
 
@@ -41,17 +45,19 @@ class MOF(object):
             if id(self) == id(other):
                 return 1
             else:
-                if self.class_name == other.class_name:
+                if mof_to_html_map(self.class_name) == other.class_name:
                     for attr in self.mof_parameters:
                         if self.mof_parameters[attr] != other.mof_parameters[attr]:
-                            print "%s != %s" %(self.mof_parameters[attr], other.mof_parameters[attr])
-                            self.logger.info("%s != %s" %(self.mof_parameters[attr], other.mof_parameters[attr]))
+                            print "%s != %s" % (self.mof_parameters[attr], other.mof_parameters[attr])
+                            self.logger.info("%s != %s" % (self.mof_parameters[
+                                             attr], other.mof_parameters[attr]))
                             return 0
                     return 1
         else:
             print "None objects are comparing"
             self.logger.info("None objects are comparing")
             return 1
+
 
 class MOFStore(object):
 
@@ -86,12 +92,14 @@ class MOFStore(object):
         else:
             return -1
 
+
 class NalaLog(object):
+
     """docstring for NalaLog"""
     def __init__(self, logpath, name=None, level=10):
         super(NalaLog, self).__init__()
         self.logger = logging.getLogger(name)
-        hdlr = logging.FileHandler(logpath+"/nala-compare.log")
+        hdlr = logging.FileHandler(logpath + "/nala-compare.log")
         formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
         hdlr.setFormatter(formatter)
         self.logger.addHandler(hdlr)

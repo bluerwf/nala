@@ -1,0 +1,16 @@
+
+mof_to_html_map = {'IBMUIMINV_SYSTEMOVERVIEW':'Computer System',
+             'IBMUIMINV_MEMORY':'Memory',
+             'IBMUIMINV_BIOS_AND_UEFI':'BIOS/uEFI',
+             'IBMUIMINV_FIRMWARE':'Firmware',
+             'IBMUIMINV_DEVICEDRIVERS':'Device Drivers',
+             'IBMUIMINV_FODKEY':'Activation Key',
+             'IBMUIMINV_LSICONTROLLERINFORMATION':'Controller Information',
+             'IBMUIMINV_LSILOGICALDRIVES':'Logical drive information',
+             'IBMUIMINV_LSIPHYSICALDRIVES':'Physical drive information',
+             'IBMUIMINV_PMCAPPLICATIONSOFTWARE':'',
+             'IBMUIMINV_IMMCONFIGIPV4_DHCP':'DHCP IPv4 Address',
+             'IBMUIMINV_IMMCONFIGIPV6_STATELESS':'IPv6 Stateless Address',
+             'IBMUIMINV_IMMCONFIGIPV6_LOCALLINK':'IPv6 Local Link Address',
+             'IBMUIMINV_IMMCONFIGIPV6_STATIC':'',
+}
